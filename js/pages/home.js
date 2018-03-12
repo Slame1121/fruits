@@ -4,8 +4,8 @@ var Home = {
 		var owl = $('#main_banner');
 		owl.owlCarousel({
 			margin: 0,
-			nav: true,
-			dots:true,
+			nav: false,
+			dots:false,
 			loop: true,
 			responsive: {
 				0: {
