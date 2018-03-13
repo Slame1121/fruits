@@ -1,7 +1,49 @@
 var Main = {
 
+	initReviews: function () {
+		var owl = $('.reviews_block_container-wrapper .owl-carousel');
+		owl.owlCarousel({
+			margin: 0,
+			nav: false,
+			dots:false,
+			loop: true,
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 1
+				},
+				1000: {
+					items: 1
+				}
+			}
+		});
+	},
+	initNews: function () {
+		var owl = $('.news_container-content__list');
+		owl.owlCarousel({
+			margin: 0,
+			nav: false,
+			dots:false,
+			loop: true,
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 2
+				},
+				1000: {
+					items: 2
+				}
+			}
+		});
+	},
 	init: function(){
 		this.initCatalog();
+		this.initReviews();
+		this.initNews();
 	},
 
 	initCatalog: function(){

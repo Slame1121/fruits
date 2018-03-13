@@ -1,0 +1,68 @@
+.reviews_block{
+  &_container{
+    padding:0 170px;
+    margin-top:40px;
+
+    &-header{
+      text-align: center;
+      margin-bottom:25px;
+      p{
+        font-size: 36px;
+      }
+    }
+    &-wrapper{
+      padding:35px 75px;
+
+      border: 5px solid transparent;
+      -moz-border-image: -moz-linear-gradient(left, #9ed388 0%, #f0f325 100%);
+      -webkit-border-image: -webkit-linear-gradient(left, #9ed388 0%, #f0f325 100%);
+      border-image: linear-gradient(to right, #9ed388 0%, #f0f325 100%);
+      border-image-slice: 1;
+
+      .item{
+        padding:15px;
+      }
+      &__comment{
+        margin-top:40px;
+        p{
+          font-size: 24px;
+        }
+      }
+      &__button{
+        margin-top:25px;
+        box-shadow: 0 0 15px 0 #00000063;
+        display: inline-block;
+        button{
+          background: #97e538;
+          cursor: pointer;
+          border:0 none;
+          color:#fff;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 24px;
+          padding:10px 25px;
+
+        }
+      }
+      &__person{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &-thumb{
+          margin-right:15px;
+          img{
+            width: auto;
+          }
+        }
+        &-name{
+          p{
+            text-transform: uppercase;
+          }
+          p,span{
+            font-size:16px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,6 +10,38 @@
         text-transform: uppercase;
       }
     }
+    &-footer{
+      border-bottom:3px solid rgba(204, 204, 204, 0.5);
+      &__link{
+        a{
+          font-size:16px;
+          text-transform: uppercase;
+          color:#000;
+          padding:25px 15px;
+          display: inline-block;
+          position: relative;
+
+          &:hover{
+            font-weight: 700;
+            &:after{
+              width: (100%);
+              height: 3px;
+            }
+          }
+          &:after{
+            content:"";
+            transition: all 1s;
+            width: 30%;
+            height: 3px;
+            bottom: 0;
+            left:0;
+            display: block;
+            background: #f36b5b;
+            position: absolute;
+          }
+        }
+      }
+    }
     &-subcategories{
       position: absolute;
       background: #fff;
