@@ -38,6 +38,7 @@
         font-size: 36px;
       }
     }
+
     &-wrapper{
       padding:35px 75px;
       background: #fff;
@@ -47,6 +48,10 @@
       border-image: linear-gradient(to right, #9ed388 0%, #f0f325 100%);
       border-image-slice: 1;
 
+      &-pagination{
+        right: 190px;
+        background: transparent;
+      }
       .item{
         padding:15px;
       }

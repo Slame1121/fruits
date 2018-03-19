@@ -2,6 +2,11 @@ var Main = {
 
 	initReviews: function () {
 		var owl = $('.reviews_block_container-wrapper .owl-carousel');
+		owl.on('changed.owl.carousel', function(e) {
+			Main.setOwlPagination(e);
+		}).on('initialized.owl.carousel',function(e){
+			Main.InitOwlPagination(e);
+		});
 		owl.owlCarousel({
 			margin: 0,
 			nav: false,
@@ -22,6 +27,11 @@ var Main = {
 	},
 	initNews: function () {
 		var owl = $('.news_container-content__list');
+		owl.on('changed.owl.carousel', function(e) {
+			Main.setOwlPagination(e);
+		}).on('initialized.owl.carousel',function(e){
+			Main.InitOwlPagination(e);
+		});
 		owl.owlCarousel({
 			margin: 0,
 			nav: false,
@@ -44,6 +54,47 @@ var Main = {
 		this.initCatalog();
 		this.initReviews();
 		this.initNews();
+
+
+	},
+
+	InitOwlPagination: function(e){
+		if (e.item) {
+			var index = e.item.index - 1;
+			var count = e.item.count;
+			if (index > count) {
+				index -= count;
+			}
+			if (index <= 0) {
+				index += count;
+			}
+		}
+		$(e.target).parent().find('.owl-custom-pagination').append('<div class="navigation"><img src="images/arrow-left.png" /><img src="images/arrow-right.png" /></div><div class="count"></div>');
+		$(e.target).parent().find('.owl-custom-pagination .navigation img:first-child').on('click', function(){
+			($(e.target).trigger('prev.owl.carousel'));
+		});
+		$(e.target).parent().find('.owl-custom-pagination .navigation img:nth-child(2)').on('click', function(){
+			($(e.target).trigger('next.owl.carousel'));
+		});
+		$(e.target).parent().find('.owl-custom-pagination').find('.navigation');
+		$(e.target).parent().find('.owl-custom-pagination .count').text(index + '/' + e.item.count)
+	},
+	setOwlPagination: function(e){
+
+		if (!e.namespace || e.property.name != 'position') return ;
+
+		if (e.item) {
+			var index = e.item.index - 1;
+			var count = e.item.count;
+			if (index > count) {
+				index -= count;
+			}
+			if (index <= 0) {
+				index += count;
+			}
+		}
+
+		$(e.target).parent().find('.owl-custom-pagination .count').text(index + '/' + e.item.count)
 	},
 
 	initCatalog: function(){
@@ -53,9 +104,16 @@ var Main = {
 		owl.children().each( function( index ) {
 			$(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
 		});
+
+
+		owl.on('changed.owl.carousel', function(e) {
+			Main.setOwlPagination(e);
+		}).on('initialized.owl.carousel',function(e){
+			Main.InitOwlPagination(e);
+		});
 		owl.owlCarousel({
 			margin: 0,
-			nav: true,
+			nav: false,
 			dots:false,
 			loop: true,
 			responsive: {

@@ -2,6 +2,14 @@ var Home = {
 	initsliders: function () {
 		//init main banner
 		var owl = $('#main_banner');
+
+
+		owl.on('changed.owl.carousel', function(e) {
+			Main.setOwlPagination(e);
+		}).on('initialized.owl.carousel',function(e){
+			Main.InitOwlPagination(e);
+		});
+
 		owl.owlCarousel({
 			margin: 0,
 			nav: false,
@@ -22,6 +30,7 @@ var Home = {
 
 
 	},
+
 	setScroll: function () {
 		$('.about_us_container-content').slimScroll({
 			height: '250px',

@@ -1,6 +1,10 @@
 .main_banner{
   margin-bottom:25px;
   &_container{
+    position: relative;
+    &-pagination{
+
+    }
     &-items{
       .item{
         position: relative;

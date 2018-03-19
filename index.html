@@ -10,11 +10,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="scss/css_plugin/labs.css" />
+	<link rel="stylesheet" href="scss/css_plugin/remodal.css" />
+	<link rel="stylesheet" href="scss/css_plugin/remodal-default-theme.css" />
 	<link rel="stylesheet" href="scss/main.css" />
 	<script type="text/javascript" src="js/components/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/components/owlcarousel/owl.carousel.js"></script>
 	<script type="text/javascript" src="js/components/owlcarousel/owl.navigation.js"></script>
 	<script type="text/javascript" src="js/components/jquery.raty-fa.js"></script>
+	<script type="text/javascript" src="js/components/remodal.js"></script>
 	<script type="text/javascript" src="js/components/jquery.slimscroll.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/pages/home.js"></script>
@@ -66,7 +69,7 @@
 						</div>
 						<div class="dropdown-content">
 							<ul class="fixed_navbar-container-cart__account-navbar__items">
-								<li><a href="#">Войти</a></li>
+								<li><a href="#login-modal">Войти</a></li>
 								<li><a href="#">Зарегистрироваться</a></li>
 							</ul>
 						</div>
@@ -100,6 +103,9 @@
 					<img src="images/banner_1.jpg" />
 					<a href="#">Подробней</a>
 				</div>
+			</div>
+			<div class="owl-custom-pagination main_banner_container-pagination">
+
 			</div>
 		</div>
 	</div>
@@ -333,6 +339,9 @@
 					</div>
 				</div>
 			</div>
+			<div class="owl-custom-pagination catalog_block_container-pagination">
+
+			</div>
 			<div class="catalog_block_container-subcategories">
 				<div class="catalog_block_container-subcategories__close">
 					<a href="#" ><img src="images/icon-close.png" /></a>
@@ -485,7 +494,9 @@
 						</div>
 					</div>
 				</div>
+				<div class="owl-custom-pagination reviews_block_container-wrapper-pagination">
 
+				</div>
 			</div>
 		</div>
 	</div>
@@ -586,6 +597,9 @@
 						</div>
 					</div>
 				</div>
+				<div class="owl-custom-pagination news_container-content-pagination">
+
+				</div>
 			</div>
 			<div class="news_container-footer">
 				<div class="news_container-footer__link">
@@ -681,6 +695,14 @@
 					<a href="#"><img src="images/youtube.png" /></a>
 				</div>
 			</div>
+		</div>
+	</div>
+</section>
+<section class="hidden_section">
+	<div class="remodal" data-remodal-id="login-modal">
+		<button data-remodal-action="close" class="remodal-close"></button>
+		<div class="login_modal">
+
 		</div>
 	</div>
 </section>
