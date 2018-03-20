@@ -50,12 +50,24 @@ var Main = {
 			}
 		});
 	},
+	initTabs: function () {
+		var all_containers = $('.tabs_container');
+		all_containers.find('.tabs_list a').on('click', function(e){
+			e.stopPropagation();
+			e.preventDefault();
+			$(this).parent().parent().find('a').removeClass('active');
+			$(this).addClass('active');
+			var href =  $(this).attr('href');
+			$(this).closest('.tabs_container').find('.tabs_items >div').hide();
+			$(this).closest('.tabs_container').find(href).fadeIn('slow');
+		})
+	},
 	init: function(){
 		this.initCatalog();
 		this.initReviews();
 		this.initNews();
 
-
+		this.initTabs();
 	},
 
 	InitOwlPagination: function(e){

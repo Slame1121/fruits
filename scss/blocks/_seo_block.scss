@@ -19,22 +19,24 @@
           box-shadow: 0 0 15px #00000052;
           background: #fff;
           &__item{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            &__text{
-              padding:0 45px;
-              p{
-                margin-top:5px;
-               &.header{
-                 margin-top:15px;
-                  text-transform: uppercase;
+            &__container{
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              &__text{
+                padding:0 45px;
+                p{
+                  margin-top:5px;
+                  &.header{
+                    margin-top:15px;
+                    text-transform: uppercase;
+                  }
                 }
               }
-            }
-            &__thumb{
-              img{
-                width: auto;
+              &__thumb{
+                img{
+                  width: auto;
+                }
               }
             }
           }

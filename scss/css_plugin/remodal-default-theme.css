@@ -41,8 +41,8 @@
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 10px;
-  padding: 35px;
-
+  padding: 35px  0;
+	border-radius: 15px;
   transform: translate3d(0, 0, 0);
 
   color: #2b2e38;
@@ -74,8 +74,8 @@
 
 .remodal-close {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  right: 10px;
 
   display: block;
   overflow: visible;
@@ -102,12 +102,12 @@
 
 .remodal-close:before {
   font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
-  font-size: 25px;
+  font-size: 45px;
   line-height: 35px;
 
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 
   display: block;
 
@@ -226,7 +226,7 @@
 
 @media only screen and (min-width: 641px) {
   .remodal {
-    max-width: 700px;
+    max-width: 500px;
   }
 }
 
