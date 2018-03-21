@@ -46,11 +46,17 @@
       position: absolute;
       background: #fff;
       width: calc(100% / 3 * 2);
-      z-index: 2;
       top:0;
       right:5px;
-      display: none;
       box-shadow: 0 0 15px;
+      opacity: 0;
+      transition: all .5s;
+      z-index: 0;
+
+      &.opened{
+        opacity: 1;
+        z-index: 4;
+      }
 
       &__close{
         position: absolute;
@@ -112,6 +118,10 @@
           position: relative;
           z-index:1;
           border:10px solid rgba(204, 204, 204, 0.7);
+
+          &.without_border{
+            border:0 none;
+          }
           &-text{
             padding:50px 15px 50px 15px;
             max-width:200px;

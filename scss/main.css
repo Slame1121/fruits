@@ -3032,7 +3032,18 @@ a {
           padding: 0 5px;
           font-size: 14px;
           color: #fff; }
+  .fixed_navbar-container-catalog:hover .fixed_navbar-container-catalog__dropdown {
+    z-index: 5;
+    opacity: 1; }
+  .fixed_navbar-container-catalog__dropdown {
+    opacity: 0;
+    transition: all 0.8s;
+    position: absolute;
+    z-index: 0; }
+    .fixed_navbar-container-catalog__dropdown > div {
+      background: #fff; }
   .fixed_navbar-container-catalog button {
+    cursor: pointer;
     text-transform: uppercase;
     border: 0 none;
     background: transparent;
@@ -3199,11 +3210,15 @@ a {
     position: absolute;
     background: #fff;
     width: calc(100% / 3 * 2);
-    z-index: 2;
     top: 0;
     right: 5px;
-    display: none;
-    box-shadow: 0 0 15px; }
+    box-shadow: 0 0 15px;
+    opacity: 0;
+    transition: all .5s;
+    z-index: 0; }
+    .catalog_block_container-subcategories.opened {
+      opacity: 1;
+      z-index: 4; }
     .catalog_block_container-subcategories__close {
       position: absolute;
       right: 15px;
@@ -3251,6 +3266,8 @@ a {
       position: relative;
       z-index: 1;
       border: 10px solid rgba(204, 204, 204, 0.7); }
+      .catalog_block_container-list__item-wrapper.without_border {
+        border: 0 none; }
       .catalog_block_container-list__item-wrapper-text {
         padding: 50px 15px 50px 15px;
         max-width: 200px; }

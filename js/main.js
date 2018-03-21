@@ -141,17 +141,71 @@ var Main = {
 			}
 		});
 
+
+		var opened = false;
+
 		//init subcategories
 		$('.catalog_block_container-list__item-wrapper-text').on('click', 'button', function(){
 			var container = $(this).closest('.catalog_block_container-list__item');
 			var n = container.data('position');
 			owl.trigger('to.owl.carousel', n);
-			container.closest('.catalog_block_container').find('.catalog_block_container-subcategories').show();
+			container.closest('.catalog_block_container').find('.catalog_block_container-subcategories').addClass('opened');
+			setTimeout(function(){
+				opened = true;
+			}, 300);
+			var position = $(this).closest('.catalog_block_container-list__item').data('position');
+
+			$.each($('div[data-position='+position+']'),function(key, val){
+				var img =	$(val).find('>img');
+				//bordered div
+				$(val).find('>div').addClass('without_border');
+				img.attr('src',img.data('image-active'));
+			});
 		});
 		$('.catalog_block_container').on('click','.catalog_block_container-subcategories__close',function(e){
 			e.stopPropagation();
 			e.preventDefault();
-			$(this).parent().hide();
+			$(this).parent().removeClass('opened');
+
+			$.each($('.catalog_block_container-list__item'),function(key, val){
+				var img =	$(val).find('>img');
+				$(val).find('>div').removeClass('without_border');
+				img.attr('src',img.data('image'));
+
+			});
+			setTimeout(function(){
+				opened = false;
+			}, 300);
+
+		})
+
+		//remove subcategories if click on body
+
+		$('body').on('click', function(e){
+			if(opened){
+				if($(e.target).closest('.catalog_block_container-subcategories.opened').length == 0){
+					$.each($('.catalog_block_container-list__item'),function(key, val){
+						var img =	$(val).find('>img');
+						img.attr('src',img.data('image'));
+						$(val).find('>div').removeClass('without_border');
+					});
+					if($(e.target).parent().hasClass('catalog_block_container-list__item-wrapper-text')){
+						var position = $(e.target).parent().parent().parent().data('position');
+						$.each($('div[data-position='+position+']'),function(key, val){
+							var img =	$(val).find('>img');
+							img.attr('src',img.data('image-active'));
+							$(val).find('>div').addClass('without_border');
+						});
+						return ;
+					}
+
+					setTimeout(function(){
+						opened = false;
+					}, 300);
+					$('.catalog_block_container-subcategories.opened').removeClass('opened');
+				}
+			}
+
 		})
 	},
 
