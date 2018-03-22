@@ -6,8 +6,52 @@
     border-bottom:1px solid #cccccc;
     padding:5px 0 0 0;
     &__item{
+
       &-logo{
         margin:0 15px;
+      }
+      &-mobile-nav{
+        display: none;
+        &__container{
+          position: absolute;
+          z-index: 25;
+          top:0;
+          right:-60%;
+          width: 60%;
+          height: 100%;
+          max-width: 60%;
+          background: #fff;
+          transition: all .4s;
+
+
+          &.open{
+            right: 0;
+          }
+          &-close{
+            position: absolute;
+            display: block;
+            right:10px;
+            top:10px;
+
+          }
+          ul{
+            margin: 35px 15px;
+            li{
+              width: 100%;
+              display: block;
+            }
+          }
+        }
+        &__button{
+          button{
+            margin:5px 5px 0 0;
+            outline: none;
+            padding:5px;
+            color:#D13D9B;
+            background: #fff;
+            border: 0 none;
+          }
+        }
       }
       &-contacts{
         font-family: $font-ptsans;

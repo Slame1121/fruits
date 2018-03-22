@@ -46,13 +46,14 @@
       position: absolute;
       background: #fff;
       width: calc(100% / 3 * 2);
-      top:0;
-      right:5px;
+      top: 60px;
+      min-height: 340px;
+      right: 5px;
       box-shadow: 0 0 15px;
       opacity: 0;
       transition: all .5s;
       z-index: 0;
-
+      
       &.opened{
         opacity: 1;
         z-index: 4;
