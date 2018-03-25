@@ -24,6 +24,29 @@ var Main = {
 				}
 			}
 		});
+
+
+		//add review button
+		$('.reviews_block_container-wrapper__button').on('click', 'button', function(e){
+			var contaienr = $(this).parent().parent();
+			if(contaienr.find('.reviews_block_container-wrapper__addreview').css('display') ==  'none'){
+				contaienr.find('.owl-carousel').hide();
+				contaienr.find('.reviews_block_container-wrapper-pagination').hide();
+				contaienr.find('.reviews_block_container-wrapper__addreview').fadeIn('slow');
+			}else{
+
+				//SEND REVIEW FORM (VALIDATION)
+			}
+		});
+		//close adding review block
+		$('.reviews_block_container-wrapper__addreview__header-close').on('click', 'a', function(e){
+			e.stopPropagation();
+			e.preventDefault();
+			var container = $(this).closest('.reviews_block_container-wrapper');
+			container.find('.reviews_block_container-wrapper__addreview').hide();
+			container.find('.owl-carousel').fadeIn('slow');
+			container.find('.reviews_block_container-wrapper-pagination').fadeIn('slow');
+		});
 	},
 	initNews: function () {
 		var owl = $('.news_container-content__list');

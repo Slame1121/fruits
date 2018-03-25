@@ -122,12 +122,18 @@
       }
 
       &__dropdown{
+        margin-top:10px;
+        background: #fff;
+        min-height: 455px;
         opacity: 0;
         transition: all 0.8s;
         position: absolute;
         z-index: 0;
         >div{
           background: #fff;
+        }
+        .catalog_block_container-subcategories{
+          top:0;
         }
 
       }

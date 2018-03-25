@@ -48,6 +48,44 @@
       border-image: linear-gradient(to right, #9ed388 0%, #f0f325 100%);
       border-image-slice: 1;
 
+      &__addreview{
+        display: none;
+
+        &__content{
+          padding: 30px 0;
+          min-height: 200px;
+          input,textarea{
+            padding: 15px 5px;
+            font-size: 16px;
+            font-family: $font-yandex-regular;
+            outline: 0 none;
+            display: block;
+            width:80%;
+            border: 0 none;
+            border-bottom: 1px solid #ccc;
+          }
+        }
+        &__header{
+         position: relative;
+          img{
+            float:left;
+            margin-right:15px;
+          }
+          p{
+            font-size: 24px;
+            font-weight: bold;
+          }
+          &-close{
+            a{
+              position: absolute;
+              right: 15px;
+              top:5px;
+              display: block;
+            }
+
+          }
+        }
+      }
       &-pagination{
         right: 190px;
         background: transparent;
@@ -66,14 +104,15 @@
         box-shadow: 0 0 15px 0 #00000063;
         display: inline-block;
         button{
+          outline: 0 none;
           background: #97e538;
           cursor: pointer;
           border:0 none;
           color:#fff;
           text-transform: uppercase;
           font-weight: bold;
-          font-size: 24px;
-          padding:10px 25px;
+          font-size: 20px;
+          padding:10px 15px;
 
         }
       }

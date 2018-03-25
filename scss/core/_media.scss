@@ -26,20 +26,35 @@
     }
   }
 
+
+
   .reviews_block_container{
     padding: 0;
 
     &-wrapper{
       padding: 0 10px;
-
+      &__addreview{
+        margin-top:40px;
+        &__header-close a{
+          right:0;
+          top:-20px;
+        }
+        &__content{
+          min-height: 0;
+        }
+      }
       &__comment{
         p{
           font-size: 18px;
         }
       }
-      &__button button{
-        padding: 10px;
-        font-size: 18px;
+      &__button{
+        margin-bottom: 25px;
+        button{
+          padding: 10px;
+          font-size: 18px;
+
+        }
       }
       &-pagination{
         right: 20px;
