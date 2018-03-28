@@ -252,7 +252,7 @@ var Main = {
 			}
 		});
 
-		$('#product_banner .raty').raty({
+		$('#product_banner .raty, .cart_block .raty').raty({
 			starType: 'i',
 			readOnly: true,
 			score: 3.5,/*function() {
@@ -266,4 +266,36 @@ $(document).ready(function(){
 
 
 	Main.init();
+});
+
+
+/* -dp- number product cart -dp- */
+
+$(document).ready(function() {
+	$('#number .minus').click(function () {
+		var $input = $(this).parent().find('input');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+		$input.change();
+		return false;
+	});
+	$('#number .plus').click(function () {
+		var $input = $(this).parent().find('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+		return false;
+	});
+
+/* delete product */
+$( "a.remove" ).each(function(index) {
+	$(this).click(function() {
+		  $(this).next('.cart_block_container-item-wrap').remove();
+		  $('.cart_block_container p').remove();
+		  $('.cart_block_container').prepend('<p><strong>Почему вы удалили товар ? :(</strong></p>');
+		  $(this).fadeOut(1);
+
+		});
+	});
+
 });
