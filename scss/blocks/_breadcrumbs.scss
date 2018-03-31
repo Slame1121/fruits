@@ -23,10 +23,15 @@
 				&:last-child:after {
 					content: '';
 				}
-				a {
+				.home {
 					color: #000;
 					font-size: 16px;
 					line-height: 25px;
+				}
+				a {
+					color: #000;
+					display: inline-block;
+					font-size: 12px;
 				}
     		}
 		}

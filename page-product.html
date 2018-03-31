@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ru"
+	  dir="ltr">
+<head>
+	<meta name="description"
+		  content="application/xhtml+xml"/>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Get an object</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="scss/css_plugin/labs.css" />
+	<link rel="stylesheet" href="scss/css_plugin/remodal.css" />
+	<link rel="stylesheet" href="scss/css_plugin/remodal-default-theme.css" />
+	<!-- custom scrollbar plugin -->
+	<link rel="stylesheet" href="scss/css_plugin/jquery.mCustomScrollbar.css" />	
+	<link rel="stylesheet" href="scss/main.css" />
+	<script type="text/javascript" src="js/components/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/components/owlcarousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="js/components/owlcarousel/owl.navigation.js"></script>
+	<script type="text/javascript" src="js/components/jquery.raty-fa.js"></script>
+	<script type="text/javascript" src="js/components/remodal.js"></script>
+	<script type="text/javascript" src="js/components/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/pages/home.js"></script>
+	<script type="text/javascript" src="js/media.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body>
+
+<section class="top_navbar">
+	<div class="container">
+		<div class="top_navbar-container">
+			<div class="top_navbar-container__item">
+				<div class="top_navbar-container__item-logo">
+					<a href=""><img src="images/logo.png" /></a>
+				</div>
+				<div class="top_navbar-container__item-mobile-nav">
+					<div class="top_navbar-container__item-mobile-nav__button">
+						<button type="button"><i class="fa fa-3x fa-bars"></i></button>
+					</div>
+					<div class="top_navbar-container__item-mobile-nav__container">
+						<a href="#" class="top_navbar-container__item-mobile-nav__container-close">
+							<img src="images/icon-close.png" />
+						</a>
+						<ul class="top_navbar-container__item-menu__list">
+							<li><a href="#">ОТЗЫВЫ</a></li>
+							<li><a class="active" href="#">КАТАЛОГ ПРОДУКЦИИ</a></li>
+							<li><a href="#">ОПЛАТА И ДОСТАВКА</a></li>
+							<li><a href="#">НАШ БЛОГ</a></li>
+							<li><a href="#">КОНТАКТЫ</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="top_navbar-container__item">
+				<div class="top_navbar-container__item-contacts">
+					<span><img src="images/icon-tel.png" /></span>
+					<a href="tel:+380990989058">+38 (099) 098 90 58</a>
+					<a href="tel:+380990989058">+38 (096) 338 45 90</a>
+				</div>
+				<div class="top_navbar-container__item-menu">
+					<ul class="top_navbar-container__item-menu__list">
+						<li><a href="#">ОТЗЫВЫ</a></li>
+						<li><a class="active" href="#">КАТАЛОГ ПРОДУКЦИИ</a></li>
+						<li><a href="#">ОПЛАТА И ДОСТАВКА</a></li>
+						<li><a href="#">НАШ БЛОГ</a></li>
+						<li><a href="#">КОНТАКТЫ</a></li>
+						<li><img src="images/icon-search.png" /></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="fixed_navbar">
+	<div class="container">
+		<div class="fixed_navbar-container">
+			<div class="fixed_navbar-container-catalog">
+				<button type="button"><img src="images/icon-catalog.png">Каталог товаров</button>
+				<div class="fixed_navbar-container-catalog__dropdown">
+					<div class="catalog_block">
+						<div class="container">
+							<div class="catalog_block_container">
+								<div class="catalog_block_container-header">
+								</div>
+								<div id="categories_list" class="catalog_block_container-list owl-carousel owl-theme">
+									<div  class="item catalog_block_container-list__item">
+										<img data-image = "images/categories/1.png" data-image-active="images/categories/1-active.png" src="images/categories/1.png" />
+										<div class="item catalog_block_container-list__item-wrapper">
+											<div class="catalog_block_container-list__item-wrapper-text">
+												<h3>ЯГОДНЫЕ И  ФРУКТОВЫЕ ПАСТЫ </h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+												<button>ПОДРОБНЕЕ</button>
+											</div>
+										</div>
+									</div>
+									<div  class="item catalog_block_container-list__item">
+										<img src="images/categories/2.png" />
+										<div class="item catalog_block_container-list__item-wrapper">
+											<div class="catalog_block_container-list__item-wrapper-text">
+												<h3>белковые ПАСТЫ</h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+												<button>ПОДРОБНЕЕ</button>
+											</div>
+										</div>
+									</div>
+									<div  class="item catalog_block_container-list__item">
+										<img src="images/categories/3.png" />
+										<div class="item catalog_block_container-list__item-wrapper">
+											<div class="catalog_block_container-list__item-wrapper-text">
+												<h3>Зерновые  и бобовые продукты</h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+												<button>ПОДРОБНЕЕ</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="owl-custom-pagination catalog_block_container-pagination">
+
+								</div>
+								<div class="catalog_block_container-subcategories">
+									<div class="catalog_block_container-subcategories__close">
+										<a href="#" ><img src="images/icon-close.png" /></a>
+									</div>
+									<div class="catalog_block_container-subcategories__header">
+										<img src="images/icon-subcategories.png" />
+										<p><span>СМОТРЕТЬ ВСЕ ТОВАРЫ</span> /  ягодные и фруктовые пасты </p>
+									</div>
+									<div class="catalog_block_container-subcategories__content">
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Черничная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Черничная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Черничная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+									</div>
+								</div>
+								<div class="catalog_block_container-footer">
+									<div class="catalog_block_container-footer__link">
+										<a href="#" class="">открыть каталог всей продукции</a>
+									</div>
+									<div class="catalog_block_container-footer__pagination">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fixed_navbar-container-cart">
+				<div class="fixed_navbar-container-cart__cart">
+					<a href="#"><img src="images/icon-bag.png" /> <span>2</span> <p class="fixed_navbar-container-cart__cart-price">1 207 грн</p></a>
+				</div>
+				<div class="fixed_navbar-container-cart__account">
+					<div class="fixed_navbar-container-cart__account-navbar dropdown">
+						<div class="dropdown-header">
+							<img src="images/icon-user.png" /> <p>Личный кабинет</p>
+						</div>
+						<div class="dropdown-content">
+							<ul class="fixed_navbar-container-cart__account-navbar__items">
+								<li><a href="#login-modal">Войти</a></li>
+								<li><a href="#">Зарегистрироваться</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="fixed_navbar-container-cart__like">
+					<a href="#"><img src="images/icon-like.png" /> <span>2</span></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<section class="breadcrumbs_block">
+	<div class="container">
+		<div class="breadcrumbs_block_container">
+			<ul class="breadcrumbs_block_container__bread-crumbs">
+				<li><a class="home" href="index.html">Главная</a></li>
+				<li><a href="#">Ягодные и фруктовые пасты</a></li>
+				<li>Виноградные пасты</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<section class="product_card">
+	<div class="container">
+		<div class="product_card_container">
+			<div class="product_card_container-item">
+				<div class="product_card_container-item-wrap">
+					<div class="product_card_container-item-wrap__images">
+						<div class="product_card_container-item-wrap__images__breadcrumbs">
+							<a href="#">Назад к <span>Виноградные пасты</span></a>
+						</div>
+						<div class="product_card_container-item-wrap__images__title">
+							Паста черного  винограда
+						</div>
+						<img src="images/products/product_1_1.jpg">
+					</div>
+					<div class="product_card_container-item-wrap__text-wrap">
+						<div class="product_card_container-item-wrap__text-wrap__head">
+							<div class="product_card_container-item-wrap__text-wrap__head_raty raty"></div>
+							<div class="product_card_container-item-wrap__text-wrap__head_like">
+								<button class="product_card_container-item-wrap__text-wrap__head_like__button" type="button"><img src="images/icon-likeg.png"></button>
+							</div>
+							<div class="product_card_container-item-wrap__text-wrap__head_repost">
+								<img src="images/icon-repost.png">
+							</div>						
+						</div>
+						<div class="product_card_container-item-wrap__text-wrap_container tabs_container">
+							<div class="product_card_container-item-wrap__text-wrap_container__tabs">
+								<ul class="tabs_list">
+									<li><a class="active" href="#tab_description">Описание продукта</a></li>
+									<li><a href="#tab_rewiews">Отзывы</a></li>
+									<li><a href="#tab_composition">Состав продукта</a></li>
+								</ul>
+							</div>
+							<div class="product_card_container-item-wrap__text-wrap_container-content tabs_items">
+								<div id="tab_description" class="product_card_container-item-wrap__text-wrap_container-content__item active mCustomScrollbar">
+									<div class="product_card_container-item-wrap__text-wrap_container-content__item-content">
+										<p>Жизнь человека омрачнится, если вдруг исчезнет виноград. Нет ни одного великого поета, который не воспел бы эту солнечную ягоду. Виноград широко используется в производстве продуктов для здоровья. Однако, большинство производителей выпускают продукты, содержащие только отдельные составляющие этой ягоды. Поэтому в продаже широко представлены соки, вина, поли-шкурки, масло из косточек… Будучи сторонниками цельных продуктов созданных самой природой, мы предлагаем единый продукт, в котором полностью раскрыт весь его уникальный потенциал.</p>
+										<p>ВИНОГРАДНЫЕ ПАСТЫ содержат флавоноиды из шкурки винограда, которые являются обсолютно мощными антиоксидантным эффектом, уменьшающими ущерб, нанесенный свободными радикалами и замедляющий процесс старения. Также ВИНОГРАДНЫЕ ПАСТЫ, результате использования HTD-ТЕХНОЛОГИИ, делают доступым ресвератрол находящийся в косточке и кожуре, который снижает уровень амилоидных бета-пептидов – патогенных.</p>
+									</div>
+								</div>
+								<div id="tab_rewiews" class="product_card_container-item-wrap__text-wrap_container-content__item">
+									<div class="product_card_container-item-wrap__text-wrap_container-content__item-content">
+										<div class="product_card_container_reviews">
+											<div class="owl-carousel owl-theme">
+												<div class="item">
+													<div class="product_card_container_reviews__person">
+														<div class="product_card_container_reviews__person-thumb">
+															<img src="images/reviews_profile.png" />
+														</div>
+														<div class="product_card_container_reviews__person-name">
+															<p>Иванов Иванов</p>
+														</div>
+													</div>
+													<div class="product_card_container_reviews__comment">
+														<p>Фруктов жидких я не знал в жизни много потерял. Фрукты житкие познал многое я осознал. Осипенко что-то знал, тайну ягод разгадал и без всякого сомненья людям тайну даровал P.s. Есть загвоздочка одна, эта тайна не проста и поймёт её не каждый только тот, кто не стандартно размышляет иногда.</p>
+													</div>
+												</div>
+												<div class="item">
+													<div class="product_card_container_reviews__person">
+														<div class="product_card_container_reviews__person-thumb">
+															<img src="images/reviews_profile.png" />
+														</div>
+														<div class="product_card_container_reviews__person-name">
+															<p>Иванов Иванов</p>
+														</div>
+													</div>
+													<div class="product_card_container_reviews__comment">
+														<p>Фруктов жидких я не знал в жизни много потерял. Фрукты житкие познал многое я осознал. Осипенко что-то знал, тайну ягод разгадал и без всякого сомненья людям тайну даровал P.s. Есть загвоздочка одна, эта тайна не проста и поймёт её не каждый только тот, кто не стандартно размышляет иногда.</p>
+													</div>
+												</div>
+												<div class="item">
+													<div class="product_card_container_reviews__person">
+														<div class="product_card_container_reviews__person-thumb">
+															<img src="images/reviews_profile.png" />
+														</div>
+														<div class="reviews_block_container-wrapper__person-name">
+															<p>Иванов Иванов</p>
+														</div>
+													</div>
+													<div class="product_card_container_reviews__comment">
+														<p>Фруктов жидких я не знал в жизни много потерял. Фрукты житкие познал многое я осознал. Осипенко что-то знал, тайну ягод разгадал и без всякого сомненья людям тайну даровал P.s. Есть загвоздочка одна, эта тайна не проста и поймёт её не каждый только тот, кто не стандартно размышляет иногда.</p>
+													</div>
+												</div>
+											</div>
+											<div class="product_card_container_reviews__addreview">
+												<div class="product_card_container_reviews__addreview__header">
+													<div class="product_card_container_reviews__addreview__header-close">
+														<a href="#"><img src="images/icon-close.png" /></a>
+													</div>
+													<img src="images/icon-profile.png" />
+													<p>ДОБАВИТЬ СВОЙ ОТЗЫВ</p>
+												</div>
+												<div class="product_card_container_reviews__addreview__content">
+													<input type="text" name="name" value="" placeholder="Укажите Ваше имя" />
+													<textarea name="comment" placeholder="Оставьте Ваш отзыв" ></textarea>
+												</div>
+											</div>
+											<div class="product_card_container_reviews__button">
+												<button>ДОБАВИТЬ ОТЗЫВ</button>
+											</div>
+											<div class="owl-custom-pagination product_card_container_reviews-pagination">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="tab_composition" class="product_card_container-item-wrap__text-wrap_container-content__item">
+									<div class="product_card_container-item-wrap__text-wrap_container-content__item-content">
+										<table class="product_card_container-item-wrap__text-wrap_container-content__item-content_table">
+											<thead>
+												<tr>
+													<th>Группы полифенолов</th>
+													<th>Количество (мг/100г)</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Катехин-подобные/катехину</td>
+													<td>14,13/3,1</td>
+												</tr>
+												<tr>
+													<td>Флавонолы/Каертецин-подобные/Мирицетин-подобные</td>
+													<td>0,99/0,57/0,42</td>
+												</tr>
+												<tr>
+													<td>Флаваконы</td>
+													<td>2,51</td>
+												</tr>
+												<tr>
+													<td>Флапоны/Апигенин-подобные/Лютеолин-подобные</td>
+													<td>0,85/0,82/0,03</td>
+												</tr>
+												<tr>
+													<td>Антоцианы</td>
+													<td>29,37</td>
+												</tr>
+												<tr>
+													<td>Не идентифицированные</td>
+													<td>29,37</td>
+												</tr>
+												<tr>
+													<td>Сумма полифенолов</td>
+													<td>50,59</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product_card_container-item-wrap__text-wrap__addtocart">
+							<div class="product_card_container-item-wrap__text-wrap__addtocart_head">
+								<div class="product_card_container-item-wrap__text-wrap__addtocart_head_type">
+									<div class="product_card_container-item-wrap__text-wrap__addtocart_head_type_title">
+										Выберете тип:
+										<span class="product_card_container-item-wrap__text-wrap__addtocart_head_type_input"></span>
+										<span class="product_card_container-item-wrap__text-wrap__addtocart_head_type_input active"></span>
+										<span class="product_card_container-item-wrap__text-wrap__addtocart_head_type_input"></span>
+									</div>
+								</div>
+								<div id="number" class="product_card_container-item-wrap__text-wrap__addtocart_head_number">
+									<div class="product_card_container-item-wrap__text-wrap__addtocart_head_number_title">
+										Количество:
+									</div>
+									<div class="product_card_container-item-wrap__text-wrap__addtocart_head_number-wrap">
+									    <span class="product_card_container-item-wrap__text-wrap__addtocart_head_number_minus minus">-</span>
+									    <input type="text" value="1" size="5"/>
+									    <span class="product_card_container-item-wrap__text-wrap__addtocart_head_number_plus plus">+</span>
+									</div>
+								</div>
+							</div>
+							<div class="product_card_container-item-wrap__text-wrap__addtocart_price">
+								<span>347</span> грн
+							</div>
+							<div class="product_card_container-item-wrap__text-wrap__addtocart_button">
+								<a href="#">
+									<span>В Корзину</span> <img src="images/icon-bag-big.png">
+								</a>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="feature_product">
+	<div class="container">
+		<div class="feature_product_container">
+			<div class="feature_product_container-header">
+				<p>С этим товаром покупают</p>
+			</div>
+			<div class="feature_product_container-content">
+				<div id="feature_banner" class="owl-carousel owl-theme feature_product_container-content__items">
+					<div class="item">
+						<div class="feature_product_container-content__items-container">
+							<div class="feature_product_container-content__items-container__header">
+								<a href="#">Паста черного  винограда  </a>
+								<div class="feature_product_container-content__items-container__header-like">
+									<button class="feature_product_container-content__items-container__header-like__button" type="button"><img src="images/icon-liked.png" /></button>
+								</div>
+							</div>
+							<div class="feature_product_container-content__items-container__image">
+								<img src="images/products/product_1.jpg" />
+							</div>
+							<div class="feature_product_container-content__items-container__content">
+								<div class="feature_product_container-content__items-container__content-price">
+									<div class="feature_product_container-content__items-container__content-price__item">
+										<p>347 грн</p>
+									</div>
+									<div class="feature_product_container-content__items-container__content-price__item">
+										<div class="raty"></div>
+										<div class="feature_product_container-content__items-container__content-price__item-rating">
+											<img src="images/icon-arrow.png" /> <span>2 отзыва</span>
+										</div>
+									</div>
+								</div>
+								<div class="feature_product_container-content__items-container__content-addtocart">
+									<a href="#">
+										<span>В корзину</span> <img src="images/icon-bag-big.png" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="feature_product_container-content__items-container">
+							<div class="feature_product_container-content__items-container__header">
+								<a href="#">Паста черного  винограда  </a>
+								<div class="feature_product_container-content__items-container__header-like">
+									<button class="feature_product_container-content__items-container__header-like__button" type="button"><img src="images/icon-like.png" /></button>
+								</div>
+							</div>
+							<div class="feature_product_container-content__items-container__image">
+								<img src="images/products/product_2.jpg" />
+							</div>
+							<div class="feature_product_container-content__items-container__content">
+								<div class="feature_product_container-content__items-container__content-price">
+									<div class="feature_product_container-content__items-container__content-price__item">
+										<p>1527 грн</p>
+									</div>
+									<div class="feature_product_container-content__items-container__content-price__item">
+										<div class="raty"></div>
+										<div class="feature_product_container-content__items-container__content-price__item-rating">
+											<img src="images/icon-arrow.png" /> <span>2 отзыва</span>
+										</div>
+									</div>
+								</div>
+								<div class="feature_product_container-content__items-container__content-addtocart not-available">
+									<a href="#">
+										<span>В корзину</span> <img src="images/icon-bag-big.png" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="feature_product_container-content__items-container">
+							<div class="feature_product_container-content__items-container__header">
+								<a href="#">Паста черного  винограда  </a>
+								<div class="feature_product_container-content__items-container__header-like">
+									<button class="feature_product_container-content__items-container__header-like__button" type="button"><img src="images/icon-like.png" /></button>
+								</div>
+							</div>
+							<div class="feature_product_container-content__items-container__image">
+								<img src="images/products/product_1.jpg" />
+							</div>
+							<div class="feature_product_container-content__items-container__content">
+								<div class="feature_product_container-content__items-container__content-price">
+									<div class="feature_product_container-content__items-container__content-price__item">
+										<p class="old_price">
+											347 грн
+										</p>
+										<p>333 грн</p>
+									</div>
+									<div class="feature_product_container-content__items-container__content-price__item">
+										<div class="raty"></div>
+										<div class="feature_product_container-content__items-container__content-price__item-rating">
+											<img src="images/icon-arrow.png" /> <span>2 отзыва</span>
+										</div>
+									</div>
+								</div>
+								<div class="feature_product_container-content__items-container__content-addtocart">
+									<a href="#">
+										<span>В корзину</span> <img src="images/icon-bag-big.png" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="feature_product_container-content__items-container">
+							<div class="feature_product_container-content__items-container__header">
+								<a href="#">Паста черного  винограда  </a>
+								<div class="feature_product_container-content__items-container__header-like">
+									<button class="feature_product_container-content__items-container__header-like__button" type="button"><img src="images/icon-like.png" /></button>
+								</div>
+							</div>
+							<div class="feature_product_container-content__items-container__image">
+								<img src="images/products/product_1.jpg" />
+							</div>
+							<div class="feature_product_container-content__items-container__content">
+								<div class="feature_product_container-content__items-container__content-price">
+									<div class="feature_product_container-content__items-container__content-price__item">
+										<p>347 грн</p>
+									</div>
+									<div class="feature_product_container-content__items-container__content-price__item">
+										<div class="raty"></div>
+										<div class="feature_product_container-content__items-container__content-price__item-rating">
+											<img src="images/icon-arrow.png" /> <span>2 отзыва</span>
+										</div>
+									</div>
+								</div>
+								<div class="feature_product_container-content__items-container__content-addtocart">
+									<a href="#">
+										<span>В корзину</span> <img src="images/icon-bag-big.png" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="feature_product_container-content__items-container">
+							<div class="feature_product_container-content__items-container__header">
+								<a href="#">Паста черного  винограда  </a>
+								<div class="feature_product_container-content__items-container__header-like">
+									<button class="feature_product_container-content__items-container__header-like__button" type="button"><img src="images/icon-like.png" /></button>
+								</div>
+							</div>
+							<div class="feature_product_container-content__items-container__image">
+								<img src="images/products/product_1.jpg" />
+							</div>
+							<div class="feature_product_container-content__items-container__content">
+								<div class="feature_product_container-content__items-container__content-price">
+									<div class="feature_product_container-content__items-container__content-price__item">
+										<p class="old_price">
+											347 грн
+										</p>
+										<p>317 грн</p>
+									</div>
+									<div class="feature_product_container-content__items-container__content-price__item">
+										<div class="raty"></div>
+										<div class="feature_product_container-content__items-container__content-price__item-rating">
+											<img src="images/icon-arrow.png" /> <span>2 отзыва</span>
+										</div>
+									</div>
+								</div>
+								<div class="feature_product_container-content__items-container__content-addtocart">
+									<a href="#">
+										<span>В корзину</span> <img src="images/icon-bag-big.png" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="footer">
+	<div class="container">
+		<div class="footer_container">
+			<div class="footer_container-top">
+				<div class="footer_container-top__logo">
+					<img src="images/logo_footer.png" />
+				</div>
+				<div class="footer_container-top__navbar">
+					<ul class="footer_container-top__navbar-list">
+						<li>
+							<a href="#">ОТЗЫВЫ</a>
+						</li>
+						<li>
+							<a href="#">КАТАЛОГ ТОВАРОВ</a>
+						</li>
+						<li>
+							<a href="#">ОПЛАТА И ДОСТАВКА</a>
+						</li>
+						<li>
+							<a href="#">НАШ БЛОГ</a>
+						</li>
+						<li>
+							<a href="#">КОНТАКТЫ</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer_container-bottom">
+				<div class="footer_container-bottom__copyrights">
+					<p>2018 ©  жидкие фрукты</p>
+				</div>
+				<div class="footer_container-bottom__social">
+					<a href="#"><img src="images/facebook-botom.png" /></a>
+					<a href="#"><img src="images/youtube.png" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</body>
+</html>

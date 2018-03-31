@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru"
+	  dir="ltr">
+<head>
+	<meta name="description"
+		  content="application/xhtml+xml"/>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Get an object</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="scss/css_plugin/labs.css" />
+	<link rel="stylesheet" href="scss/css_plugin/remodal.css" />
+	<link rel="stylesheet" href="scss/css_plugin/remodal-default-theme.css" />	
+	<link rel="stylesheet" href="scss/main.css" />
+	<script type="text/javascript" src="js/components/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/components/owlcarousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="js/components/owlcarousel/owl.navigation.js"></script>
+	<script type="text/javascript" src="js/components/jquery.raty-fa.js"></script>
+	<script type="text/javascript" src="js/components/remodal.js"></script>
+	<script type="text/javascript" src="js/components/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/pages/home.js"></script>
+	<script type="text/javascript" src="js/media.js"></script>
+</head>
+<body>
+
+<section class="top_navbar">
+	<div class="container">
+		<div class="top_navbar-container">
+			<div class="top_navbar-container__item">
+				<div class="top_navbar-container__item-logo">
+					<a href=""><img src="images/logo.png" /></a>
+				</div>
+				<div class="top_navbar-container__item-mobile-nav">
+					<div class="top_navbar-container__item-mobile-nav__button">
+						<button type="button"><i class="fa fa-3x fa-bars"></i></button>
+					</div>
+					<div class="top_navbar-container__item-mobile-nav__container">
+						<a href="#" class="top_navbar-container__item-mobile-nav__container-close">
+							<img src="images/icon-close.png" />
+						</a>
+						<ul class="top_navbar-container__item-menu__list">
+							<li><a href="#">ОТЗЫВЫ</a></li>
+							<li><a class="active" href="#">КАТАЛОГ ПРОДУКЦИИ</a></li>
+							<li><a href="#">ОПЛАТА И ДОСТАВКА</a></li>
+							<li><a href="#">НАШ БЛОГ</a></li>
+							<li><a href="#">КОНТАКТЫ</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="top_navbar-container__item">
+				<div class="top_navbar-container__item-contacts">
+					<span><img src="images/icon-tel.png" /></span>
+					<a href="tel:+380990989058">+38 (099) 098 90 58</a>
+					<a href="tel:+380990989058">+38 (096) 338 45 90</a>
+				</div>
+				<div class="top_navbar-container__item-menu">
+					<ul class="top_navbar-container__item-menu__list">
+						<li><a href="#">ОТЗЫВЫ</a></li>
+						<li><a class="active" href="#">КАТАЛОГ ПРОДУКЦИИ</a></li>
+						<li><a href="#">ОПЛАТА И ДОСТАВКА</a></li>
+						<li><a href="#">НАШ БЛОГ</a></li>
+						<li><a href="#">КОНТАКТЫ</a></li>
+						<li><img src="images/icon-search.png" /></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="fixed_navbar">
+	<div class="container">
+		<div class="fixed_navbar-container">
+			<div class="fixed_navbar-container-catalog">
+				<button type="button"><img src="images/icon-catalog.png">Каталог товаров</button>
+				<div class="fixed_navbar-container-catalog__dropdown">
+					<div class="catalog_block">
+						<div class="container">
+							<div class="catalog_block_container">
+								<div class="catalog_block_container-header">
+								</div>
+								<div id="categories_list" class="catalog_block_container-list owl-carousel owl-theme">
+									<div  class="item catalog_block_container-list__item">
+										<img data-image = "images/categories/1.png" data-image-active="images/categories/1-active.png" src="images/categories/1.png" />
+										<div class="item catalog_block_container-list__item-wrapper">
+											<div class="catalog_block_container-list__item-wrapper-text">
+												<h3>ЯГОДНЫЕ И  ФРУКТОВЫЕ ПАСТЫ </h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+												<button>ПОДРОБНЕЕ</button>
+											</div>
+										</div>
+									</div>
+									<div  class="item catalog_block_container-list__item">
+										<img src="images/categories/2.png" />
+										<div class="item catalog_block_container-list__item-wrapper">
+											<div class="catalog_block_container-list__item-wrapper-text">
+												<h3>белковые ПАСТЫ</h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+												<button>ПОДРОБНЕЕ</button>
+											</div>
+										</div>
+									</div>
+									<div  class="item catalog_block_container-list__item">
+										<img src="images/categories/3.png" />
+										<div class="item catalog_block_container-list__item-wrapper">
+											<div class="catalog_block_container-list__item-wrapper-text">
+												<h3>Зерновые  и бобовые продукты</h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+												<button>ПОДРОБНЕЕ</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="owl-custom-pagination catalog_block_container-pagination">
+
+								</div>
+								<div class="catalog_block_container-subcategories">
+									<div class="catalog_block_container-subcategories__close">
+										<a href="#" ><img src="images/icon-close.png" /></a>
+									</div>
+									<div class="catalog_block_container-subcategories__header">
+										<img src="images/icon-subcategories.png" />
+										<p><span>СМОТРЕТЬ ВСЕ ТОВАРЫ</span> /  ягодные и фруктовые пасты </p>
+									</div>
+									<div class="catalog_block_container-subcategories__content">
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Черничная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Черничная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Черничная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+									</div>
+								</div>
+								<div class="catalog_block_container-footer">
+									<div class="catalog_block_container-footer__link">
+										<a href="#" class="">открыть каталог всей продукции</a>
+									</div>
+									<div class="catalog_block_container-footer__pagination">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fixed_navbar-container-cart">
+				<div class="fixed_navbar-container-cart__cart">
+					<a href="#"><img src="images/icon-bag.png" /> <span>2</span> <p class="fixed_navbar-container-cart__cart-price">1 207 грн</p></a>
+				</div>
+				<div class="fixed_navbar-container-cart__account">
+					<div class="fixed_navbar-container-cart__account-navbar dropdown">
+						<div class="dropdown-header">
+							<img src="images/icon-user.png" /> <p>Личный кабинет</p>
+						</div>
+						<div class="dropdown-content">
+							<ul class="fixed_navbar-container-cart__account-navbar__items">
+								<li><a href="#login-modal">Войти</a></li>
+								<li><a href="#">Зарегистрироваться</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="fixed_navbar-container-cart__like">
+					<a href="#"><img src="images/icon-liked.png" /> <span>2</span></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<section class="breadcrumbs_block">
+	<div class="container">
+		<div class="breadcrumbs_block_container">
+			<ul class="breadcrumbs_block_container__bread-crumbs">
+				<li><a class="home" href="index.html">Главная</a></li>
+				<li>Оплата и Доставка</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<section class="paid_block">
+	<div class="container">
+		<div class="paid_block_container">
+			<div class="paid_block_container-content tabs_container">
+				<div class="paid_block_container-content__tabs">
+					<ul class="tabs_list">
+						<li><a class="active" href="#tab_delivery">Доставка</a></li>
+						<li><a href="#tab_paid">Оплата</a></li>
+					</ul>
+				</div>
+				<div class="paid_block_container-content__wrapper">
+					<div class="paid_block_container-content__wrapper-content tabs_items">
+						<div id="tab_delivery" class="paid_block_container-content__wrapper-content__item active">
+							<div class="paid_block_container-content__wrapper-content__item__container">
+								<div class="paid_block_container-content__wrapper-content__item__container__text">
+									<table class="paid_block_container-content__wrapper-content__item__container__text_table">
+										<thead>
+											<tr>
+												<th>Виды доставки</th>
+												<th>Стоимость</th>
+												<th>Для Херсона</th>
+												<th>Для Регионов</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>самовывоз</td>
+												<td>бесплатно</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+												<td style="text-align:center;">—</td>
+											</tr>
+											<tr>
+												<td>доставка курьеров</td>
+												<td>50 грн / бесплатно от 1000 грн</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+												<td style="text-align:center;">—</td>
+											</tr>
+											<tr>
+												<td>новой почтой<br />на склад</td>
+												<td>согласно тарифам нп /<br />бесплатно от 1000 грн</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>новой почтой<br />курьером по адресу</td>
+												<td>согласно тарифам нп</td>
+												<td style="text-align:center;">—</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="paid_block_container-content__wrapper-content__item__container__text_item-wrap">
+										<p>Оплатить заказ наличными при получении можно в шоу-руме Chicardi, курьеру Chicardi или курьеру Новой Почты, а также на отделении Новой Почты (наложенный платеж). Обращаем Ваше внимание на то, что наложенный платеж оплачивается дополнительно вне зависимости от суммы заказа. Эта сумма в среднем варьируется в пределах 20-45 гривен (в зависимости от суммы заказа). Чтобы избежать этих расходов, рекомендуем производить оплату всего заказа карточкой через платежную систему on-line, или Приват24 или по безналичному расчету.</p>
+									</div>
+									<div class="paid_block_container-content__wrapper-content__item__container__text_item-wrap">
+										<p>Вы можете моментально оплатить свой заказ карточкой с помощью платежной системы Interkassa.</p>
+									</div>
+									<div class="paid_block_container-content__wrapper-content__item__container__text_item-wrap">
+										<p>Если Вам удобно произвести оплату заказа на карточку Приватбанка – просто укажите это в комментариях к заказу или скажите нашему менеджеру во время подтверждения заказа в телефонном режиме. Как правило, деньги зачисляются на карточку Приватбанка моментально, поэтому Вы так же быстро получите оплаченный Вами заказ.</p>
+									</div>
+									<div class="paid_block_container-content__wrapper-content__item__container__text_item-wrap">
+										<p>Если Вы оформляете заказ на фирму, укажите это в комментариях к заказу или в телефонном режиме. Мы подготовим все документы и выставим счет для безналичного расчета.</p>
+									</div>
+									<div class="paid_block_container-content__wrapper-content__item__container__text_item-wrap">
+										<p>Если обстоятельства сложились так, что Вы не можете забрать заказ или хотите его вернуть/обменять по каким-либо причинам, Вы всегда можете это сделать на протяжении 14 дней с момента получения заказа. Для этого достаточно позвонить нам на номер +38 098 1133899 или написать нам на почту info@chicardi.com.ua. Мы обещаем детально проконсультировать Вас о том, как это лучше сделать и поможем выбрать для Вас самый удобный способ возврата денег или замены товара. Даже в таком случаи мы приложим все усилия, чтобы Вы остались довольными.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="tab_paid" class="paid_block_container-content__wrapper-content__item">
+							<div class="paid_block_container-content__wrapper-content__item__container">
+								<div class="paid_block_container-content__wrapper-content__item__container__text">
+									<table class="paid_block_container-content__wrapper-content__item__container__text_table">
+										<thead>
+											<tr>
+												<th>Виды оплаты</th>
+												<th>Стоимость</th>
+												<th>Для Херсона</th>
+												<th>Для Регионов</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>наличными</td>
+												<td>бесплатно / согласно тарифам нп</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>карточкой on-line</td>
+												<td>комиссия</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>на карту приватбанка</td>
+												<td>без комисии</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>по безналичному расчету</td>
+												<td> — </td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>возврат или обмен</td>
+												<td>бесплатно / 50 грн /<br />согласно тарифам нп</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+												<td>
+													<div class="paid_block_container-content__wrapper-content__item__container__text_table__like">
+														<button class="" type="button"><img src="images/icon-liked.png"></button>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="paid_block_container-content__wrapper-content__item__container__text_item-wrap">
+										<p>Самовывоз осуществляется в любое удобное для Вас время без предварительного звонка. Адрес: г. Киев, ул. К. Малевича 86П, оф. 308 (станция метро "Либедская") с понедельника по субботу с 10-00 до 20-00. Есть бесплатная парковка!</p>
+									</div>
+									<div class="paid_block_container-content__wrapper-content__item__container__text_item-wrap">
+										<p>Курьерская доставка по Киеву осуществляется с понедельника по субботу с 10-00 до 20-00. Стоимость доставки - 50 грн, доставка при заказе на сумму от 1000 грн – бесплатная. Как правило, доставка осуществляется в день заказа или на следующий день, а также в любой другой день по желанию клиента. Перед доставкой с Вами обязательно свяжется наш менеджер для подтверждения адреса и времени доставки.</p>
+									</div>
+									<div class="paid_block_container-content__wrapper-content__item__container__text_item-wrap">
+										<p>Ваш заказ может быть доставлен на любой склад Новой Почты. Как правило, заказ Вы сможете забрать уже на следующий день или через день после смс-извещения от Новой Почты. Во время получения заказа Вы всегда можете его вскрыть и проверить целостность и качество заказанной продукции прямо в отделении Новой Почты. Смс-сообщение с номером декларации Вы получите на указанный номер телефона в день оформления заказа. Заказ необходимо забрать на протяжении 5-ти рабочих дней с момента прибытия в указанное отделение Новой Почты.</p>
+									</div>
+									<div class="paid_block_container-content__wrapper-content__item__container__text_item-wrap">
+										<p>Курьерская доставка Новой почты осуществляется на указанный Вами адрес в любом городе/поселке Украины. Перед доставкой представитель Новой Почты в обязательном порядке свяжется с Вами для подтверждения адреса и времени доставки. Обычно, курьерская доставка считается по двойному тарифу (от 50 грн) и всегда оплачивается получателем, даже если заказ оформлен на сумму свыше 1000 грн. Доставка займет 2-3 дня</p>
+									</div>
+									<div class="paid_block_container-content__wrapper-content__item__container__text_item-wrap">
+										<p>Для всех жителей Киева мы предлагаем бесплатную и очень удобную услугу – доставку нескольких позиций на выбор. Конечно, весь ассортимент мы привезти не сможем, но зато, дополнительные 2-3 единицы в Ваших руках точно помогут Вам сделать правильный выбор. Для этого достаточно просто оформить заказ со всем тем, что хотите увидеть «вживую», и указать в комментариях о позициях на выбор.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="paid_block_container__question">
+				<blockquote>Очень просим предупреждать нас в случае, если доставка была оформлена в другой город наложенным платежом и у Вас по каким-либо причинам не получается забрать заказ с отделения Новой Почты на протяжении 5-ти рабочих дней. В противном случаи мы будем вынуждены отнести таких клиентов к «несерьезным» с определенной пометкой в истории заказов, что не позволит им больше оформлять заказы наложенным платежом в интернет-магазине.</blockquote>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="footer">
+	<div class="container">
+		<div class="footer_container">
+			<div class="footer_container-top">
+				<div class="footer_container-top__logo">
+					<img src="images/logo_footer.png" />
+				</div>
+				<div class="footer_container-top__navbar">
+					<ul class="footer_container-top__navbar-list">
+						<li>
+							<a href="#">ОТЗЫВЫ</a>
+						</li>
+						<li>
+							<a href="#">КАТАЛОГ ТОВАРОВ</a>
+						</li>
+						<li>
+							<a href="#">ОПЛАТА И ДОСТАВКА</a>
+						</li>
+						<li>
+							<a href="#">НАШ БЛОГ</a>
+						</li>
+						<li>
+							<a href="#">КОНТАКТЫ</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer_container-bottom">
+				<div class="footer_container-bottom__copyrights">
+					<p>2018 ©  жидкие фрукты</p>
+				</div>
+				<div class="footer_container-bottom__social">
+					<a href="#"><img src="images/facebook-botom.png" /></a>
+					<a href="#"><img src="images/youtube.png" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</body>
+</html>
