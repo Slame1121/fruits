@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru"
+	  dir="ltr">
+<head>
+	<meta name="description"
+		  content="application/xhtml+xml"/>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Get an object</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="scss/css_plugin/labs.css" />
+	<link rel="stylesheet" href="scss/css_plugin/remodal.css" />
+	<link rel="stylesheet" href="scss/css_plugin/remodal-default-theme.css" />	
+	<link rel="stylesheet" href="scss/main.css" />
+	<script type="text/javascript" src="js/components/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/components/owlcarousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="js/components/owlcarousel/owl.navigation.js"></script>
+	<script type="text/javascript" src="js/components/jquery.raty-fa.js"></script>
+	<script type="text/javascript" src="js/components/remodal.js"></script>
+	<script type="text/javascript" src="js/components/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/pages/home.js"></script>
+	<script type="text/javascript" src="js/media.js"></script>
+</head>
+<body>
+
+<section class="top_navbar">
+	<div class="container">
+		<div class="top_navbar-container">
+			<div class="top_navbar-container__item">
+				<div class="top_navbar-container__item-logo">
+					<a href=""><img src="images/logo.png" /></a>
+				</div>
+				<div class="top_navbar-container__item-mobile-nav">
+					<div class="top_navbar-container__item-mobile-nav__button">
+						<button type="button"><i class="fa fa-3x fa-bars"></i></button>
+					</div>
+					<div class="top_navbar-container__item-mobile-nav__container">
+						<a href="#" class="top_navbar-container__item-mobile-nav__container-close">
+							<img src="images/icon-close.png" />
+						</a>
+						<ul class="top_navbar-container__item-menu__list">
+							<li><a href="#">ОТЗЫВЫ</a></li>
+							<li><a class="active" href="#">КАТАЛОГ ПРОДУКЦИИ</a></li>
+							<li><a href="#">ОПЛАТА И ДОСТАВКА</a></li>
+							<li><a href="#">НАШ БЛОГ</a></li>
+							<li><a href="#">КОНТАКТЫ</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="top_navbar-container__item">
+				<div class="top_navbar-container__item-contacts">
+					<span><img src="images/icon-tel.png" /></span>
+					<a href="tel:+380990989058">+38 (099) 098 90 58</a>
+					<a href="tel:+380990989058">+38 (096) 338 45 90</a>
+				</div>
+				<div class="top_navbar-container__item-menu">
+					<ul class="top_navbar-container__item-menu__list">
+						<li><a href="#">ОТЗЫВЫ</a></li>
+						<li><a class="active" href="#">КАТАЛОГ ПРОДУКЦИИ</a></li>
+						<li><a href="#">ОПЛАТА И ДОСТАВКА</a></li>
+						<li><a href="#">НАШ БЛОГ</a></li>
+						<li><a href="#">КОНТАКТЫ</a></li>
+						<li><img src="images/icon-search.png" /></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="fixed_navbar">
+	<div class="container">
+		<div class="fixed_navbar-container">
+			<div class="fixed_navbar-container-catalog">
+				<button type="button"><img src="images/icon-catalog.png">Каталог товаров</button>
+				<div class="fixed_navbar-container-catalog__dropdown">
+					<div class="catalog_block">
+						<div class="container">
+							<div class="catalog_block_container">
+								<div class="catalog_block_container-header">
+								</div>
+								<div id="categories_list" class="catalog_block_container-list owl-carousel owl-theme">
+									<div  class="item catalog_block_container-list__item">
+										<img data-image = "images/categories/1.png" data-image-active="images/categories/1-active.png" src="images/categories/1.png" />
+										<div class="item catalog_block_container-list__item-wrapper">
+											<div class="catalog_block_container-list__item-wrapper-text">
+												<h3>ЯГОДНЫЕ И  ФРУКТОВЫЕ ПАСТЫ </h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+												<button>ПОДРОБНЕЕ</button>
+											</div>
+										</div>
+									</div>
+									<div  class="item catalog_block_container-list__item">
+										<img src="images/categories/2.png" />
+										<div class="item catalog_block_container-list__item-wrapper">
+											<div class="catalog_block_container-list__item-wrapper-text">
+												<h3>белковые ПАСТЫ</h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+												<button>ПОДРОБНЕЕ</button>
+											</div>
+										</div>
+									</div>
+									<div  class="item catalog_block_container-list__item">
+										<img src="images/categories/3.png" />
+										<div class="item catalog_block_container-list__item-wrapper">
+											<div class="catalog_block_container-list__item-wrapper-text">
+												<h3>Зерновые  и бобовые продукты</h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+												<button>ПОДРОБНЕЕ</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="owl-custom-pagination catalog_block_container-pagination">
+
+								</div>
+								<div class="catalog_block_container-subcategories">
+									<div class="catalog_block_container-subcategories__close">
+										<a href="#" ><img src="images/icon-close.png" /></a>
+									</div>
+									<div class="catalog_block_container-subcategories__header">
+										<img src="images/icon-subcategories.png" />
+										<p><span>СМОТРЕТЬ ВСЕ ТОВАРЫ</span> /  ягодные и фруктовые пасты </p>
+									</div>
+									<div class="catalog_block_container-subcategories__content">
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Черничная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Черничная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Черничная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+										<div class="catalog_block_container-subcategories__content-item">
+											<a href="">Клюквенная паста</a>
+										</div>
+									</div>
+								</div>
+								<div class="catalog_block_container-footer">
+									<div class="catalog_block_container-footer__link">
+										<a href="#" class="">открыть каталог всей продукции</a>
+									</div>
+									<div class="catalog_block_container-footer__pagination">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fixed_navbar-container-cart">
+				<div class="fixed_navbar-container-cart__cart">
+					<a href="#"><img src="images/icon-bag.png" /> <span>2</span> <p class="fixed_navbar-container-cart__cart-price">1 207 грн</p></a>
+				</div>
+				<div class="fixed_navbar-container-cart__account">
+					<div class="fixed_navbar-container-cart__account-navbar dropdown">
+						<div class="dropdown-header">
+							<img src="images/icon-user.png" /> <p>Личный кабинет</p>
+						</div>
+						<div class="dropdown-content">
+							<ul class="fixed_navbar-container-cart__account-navbar__items">
+								<li><a href="#login-modal">Войти</a></li>
+								<li><a href="#">Зарегистрироваться</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="fixed_navbar-container-cart__like">
+					<a href="#"><img src="images/icon-like.png" /> <span>2</span></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<section class="breadcrumbs_block">
+	<div class="container">
+		<div class="breadcrumbs_block_container">
+			<ul class="breadcrumbs_block_container__bread-crumbs">
+				<li><a class="home" href="index.html">Главная</a></li>
+				<li>О Компании</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<section class="seo_block about">
+	<div class="container">
+		<div class="seo_block_container">
+			<div class="seo_block_container-header">
+				<p>О КОМПАНИИ “ЖИДКИЕ ФРУКТЫ”</p>
+			</div>
+			<div class="seo_block_container-content tabs_container">
+				<div class="seo_block_container-content__tabs">
+					<ul class="tabs_list">
+						<li><a href="#tab_about_us">О КОМПАНИИ</a></li>
+						<li><a href="#tab_mission">НАША МИССИЯ</a></li>
+						<li><a class="active" href="#tab_motivation">НАША МОТИВАЦИЯ</a></li>
+						<li><a href="#tab_clear">БОРЬБА ЗА ЧИСТОТУ</a></li>
+						<li><a href="#tab_quality">КАЧЕСТВО ЖИЗНИ</a></li>
+					</ul>
+				</div>
+				<div class="seo_block_container-content__wrapper">
+					<div class="seo_block_container-content__wrapper-content tabs_items">
+						<div id="tab_about_us" class="seo_block_container-content__wrapper-content__item ">
+							<div class="seo_block_container-content__wrapper-content__item__container">
+								<div class="seo_block_container-content__wrapper-content__item__container__thumb">
+									<img src="images/seo_1.png" />
+								</div>
+								<div class="seo_block_container-content__wrapper-content__item__container__text">
+									<p class="header">И ВЫ В ЭТО ЕЩЕ ВЕРИТЕ?!</p>
+									<p>Один компонент не может лечить. Лечение всегда носит КОМПЛЕКСНЫЙ характер. Советуем не поддаваться на рекламу о чудесном исцелении с помощью отдельных компонентов типа «Омеги-5», ресвиратрола и пр. Лечит не само химическое соединение, например, ресвиратрол C14H12O3, а его форма и биохимическая активность в комбинации с другими компонентами виноградной косточки, которые в частности обеспечивают транспортировку ресвиратрола к пораженному органу и его усвоение клетками этого органа.
+									</p>
+									<p class="header">ЧТО МЫ ПРЕДЛАГАЕМ?</p>
+									<p>Эффект синергизма – усиление одних компонентов за счет свойств других.</p>
+									<p class="header">ЧТО МЫ УТВЕРЖДАЕМ! (НАША ГИПОТЕЗА)</p>
+									<p>Природа дала нам плоды (ягоды, фрукты), которые уже содержат все необходимое для полноценного усвоения человеком. Если в ягодах и фруктах ничего не убивать в процессе переработки, ничего не надо и добавлять! Нужно лишь научиться максимально долго сохранять природные свойства растения и сделать их более доступными для организма человека.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div id="tab_mission" class="seo_block_container-content__wrapper-content__item">
+							<div class="seo_block_container-content__wrapper-content__item__container">
+								<div class="seo_block_container-content__wrapper-content__item__container__thumb">
+									<img src="images/seo_1.png" />
+								</div>
+								<div class="seo_block_container-content__wrapper-content__item__container__text">
+									<p class="header">И ВЫ В ЭТО ЕЩЕ ВЕРИТЕ?!</p>
+									<p>Один компонент не может лечить. Лечение всегда носит КОМПЛЕКСНЫЙ характер. Советуем не поддаваться на рекламу о чудесном исцелении с помощью отдельных компонентов типа «Омеги-5», ресвиратрола и пр. Лечит не само химическое соединение, например, ресвиратрол C14H12O3, а его форма и биохимическая активность в комбинации с другими компонентами виноградной косточки, которые в частности обеспечивают транспортировку ресвиратрола к пораженному органу и его усвоение клетками этого органа.
+									</p>
+									<p class="header">ЧТО МЫ ПРЕДЛАГАЕМ?</p>
+									<p>Эффект синергизма – усиление одних компонентов за счет свойств других.</p>
+									<p class="header">ЧТО МЫ УТВЕРЖДАЕМ! (НАША ГИПОТЕЗА)</p>
+									<p>Природа дала нам плоды (ягоды, фрукты), которые уже содержат все необходимое для полноценного усвоения человеком. Если в ягодах и фруктах ничего не убивать в процессе переработки, ничего не надо и добавлять! Нужно лишь научиться максимально долго сохранять природные свойства растения и сделать их более доступными для организма человека.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div id="tab_motivation" class="seo_block_container-content__wrapper-content__item active">
+							<div class="seo_block_container-content__wrapper-content__item__container">
+								<div class="seo_block_container-content__wrapper-content__item__container__thumb">
+									<img src="images/seo_1.png" />
+								</div>
+								<div class="seo_block_container-content__wrapper-content__item__container__text">
+									<p class="header">И ВЫ В ЭТО ЕЩЕ ВЕРИТЕ?!</p>
+									<p>Один компонент не может лечить. Лечение всегда носит КОМПЛЕКСНЫЙ характер. Советуем не поддаваться на рекламу о чудесном исцелении с помощью отдельных компонентов типа «Омеги-5», ресвиратрола и пр. Лечит не само химическое соединение, например, ресвиратрол C14H12O3, а его форма и биохимическая активность в комбинации с другими компонентами виноградной косточки, которые в частности обеспечивают транспортировку ресвиратрола к пораженному органу и его усвоение клетками этого органа.
+									</p>
+									<p class="header">ЧТО МЫ ПРЕДЛАГАЕМ?</p>
+									<p>Эффект синергизма – усиление одних компонентов за счет свойств других.</p>
+									<p class="header">ЧТО МЫ УТВЕРЖДАЕМ! (НАША ГИПОТЕЗА)</p>
+									<p>Природа дала нам плоды (ягоды, фрукты), которые уже содержат все необходимое для полноценного усвоения человеком. Если в ягодах и фруктах ничего не убивать в процессе переработки, ничего не надо и добавлять! Нужно лишь научиться максимально долго сохранять природные свойства растения и сделать их более доступными для организма человека.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div id="tab_clear" class="seo_block_container-content__wrapper-content__item ">
+							<div class="seo_block_container-content__wrapper-content__item__container">
+								<div class="seo_block_container-content__wrapper-content__item__container__thumb">
+									<img src="images/seo_1.png" />
+								</div>
+								<div class="seo_block_container-content__wrapper-content__item__container__text">
+									<p class="header">И ВЫ В ЭТО ЕЩЕ ВЕРИТЕ?!</p>
+									<p>Один компонент не может лечить. Лечение всегда носит КОМПЛЕКСНЫЙ характер. Советуем не поддаваться на рекламу о чудесном исцелении с помощью отдельных компонентов типа «Омеги-5», ресвиратрола и пр. Лечит не само химическое соединение, например, ресвиратрол C14H12O3, а его форма и биохимическая активность в комбинации с другими компонентами виноградной косточки, которые в частности обеспечивают транспортировку ресвиратрола к пораженному органу и его усвоение клетками этого органа.
+									</p>
+									<p class="header">ЧТО МЫ ПРЕДЛАГАЕМ?</p>
+									<p>Эффект синергизма – усиление одних компонентов за счет свойств других.</p>
+									<p class="header">ЧТО МЫ УТВЕРЖДАЕМ! (НАША ГИПОТЕЗА)</p>
+									<p>Природа дала нам плоды (ягоды, фрукты), которые уже содержат все необходимое для полноценного усвоения человеком. Если в ягодах и фруктах ничего не убивать в процессе переработки, ничего не надо и добавлять! Нужно лишь научиться максимально долго сохранять природные свойства растения и сделать их более доступными для организма человека.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div id="tab_quality" class="seo_block_container-content__wrapper-content__item">
+							<div class="seo_block_container-content__wrapper-content__item__container">
+								<div class="seo_block_container-content__wrapper-content__item__container__thumb">
+									<img src="images/seo_1.png" />
+								</div>
+								<div class="seo_block_container-content__wrapper-content__item__container__text">
+									<p class="header">И ВЫ В ЭТО ЕЩЕ ВЕРИТЕ?!</p>
+									<p>Один компонент не может лечить. Лечение всегда носит КОМПЛЕКСНЫЙ характер. Советуем не поддаваться на рекламу о чудесном исцелении с помощью отдельных компонентов типа «Омеги-5», ресвиратрола и пр. Лечит не само химическое соединение, например, ресвиратрол C14H12O3, а его форма и биохимическая активность в комбинации с другими компонентами виноградной косточки, которые в частности обеспечивают транспортировку ресвиратрола к пораженному органу и его усвоение клетками этого органа.
+									</p>
+									<p class="header">ЧТО МЫ ПРЕДЛАГАЕМ?</p>
+									<p>Эффект синергизма – усиление одних компонентов за счет свойств других.</p>
+									<p class="header">ЧТО МЫ УТВЕРЖДАЕМ! (НАША ГИПОТЕЗА)</p>
+									<p>Природа дала нам плоды (ягоды, фрукты), которые уже содержат все необходимое для полноценного усвоения человеком. Если в ягодах и фруктах ничего не убивать в процессе переработки, ничего не надо и добавлять! Нужно лишь научиться максимально долго сохранять природные свойства растения и сделать их более доступными для организма человека.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="about_consultation">
+				<h3>Консультация до и после покупки</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="information_block">
+	<div class="container">
+		<div class="information_block_container">
+			<div class="information_block_container-item">
+				<div class="information_block_container-item__thumb">
+					<img src="images/help_1.png" />
+				</div>
+				<div class="information_block_container-item__text">
+					<p class="header">ОПЛАТА И ДОСТАВКА</p>
+					<p>Заказ поступивший в интернет  магазин обрабатывается в рабочие дни
+						(понедельник - пятница) с 9.00 до 17.00.
+						Интернет – магазин в выходные дни </p>
+				</div>
+			</div>
+			<div class="information_block_container-item">
+				<div class="information_block_container-item__thumb">
+					<img src="images/help_2.png" />
+				</div>
+				<div class="information_block_container-item__text">
+					<p class="header">КОНСУЛЬТИАЦИИ КЛИЕНТОВ</p>
+					<p>Все товары, купленные
+						в интернет - магазине сертифицированы и обеспечиваются фирменной гарантией, срок которой установлен  производителем.
+					</p>
+				</div>
+			</div>
+			<div class="information_block_container-item">
+				<div class="information_block_container-item__thumb">
+					<img src="images/help_3.png" />
+				</div>
+				<div class="information_block_container-item__text">
+					<p class="header">СЕРТИФИКАЦИЯ ПРОДУКТОВ</p>
+					<p>Все товары, купленные
+						в интернет - магазине сертифицированы и обеспечиваются фирменной гарантией, срок которой установлен  производителем.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="reviews_block">
+	<div class="reviews_block_backgrounds">
+		<div class="background-1">
+		</div>
+	</div>
+	<div class="container">
+		<div class="reviews_block_container">
+			<div class="reviews_block_container-header">
+				<p>ОТЗЫВЫ НАШИХ КЛИЕНТОВ</p>
+			</div>
+
+
+			<div class="reviews_block_container-wrapper">
+				<div class="owl-carousel owl-theme">
+					<div class="item">
+						<div class="reviews_block_container-wrapper__person">
+							<div class="reviews_block_container-wrapper__person-thumb">
+								<img src="images/reviews_profile.png" />
+							</div>
+							<div class="reviews_block_container-wrapper__person-name">
+								<p>Иванов Иванов</p>
+								<span>16.02.2018</span>
+							</div>
+						</div>
+						<div class="reviews_block_container-wrapper__comment">
+							<p>Фруктов жидких я не знал в жизни много потерял. Фрукты житкие познал многое я осознал. Осипенко что-то знал, тайну ягод разгадал и без всякого сомненья людям тайну даровал P.s. Есть загвоздочка одна, эта тайна не проста и поймёт её не каждый только тот, кто не стандартно размышляет иногда.</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="reviews_block_container-wrapper__person">
+							<div class="reviews_block_container-wrapper__person-thumb">
+								<img src="images/reviews_profile.png" />
+							</div>
+							<div class="reviews_block_container-wrapper__person-name">
+								<p>Иванов Иванов</p>
+								<span>16.02.2018</span>
+							</div>
+						</div>
+						<div class="reviews_block_container-wrapper__comment">
+							<p>Фруктов жидких я не знал в жизни много потерял. Фрукты житкие познал многое я осознал. Осипенко что-то знал, тайну ягод разгадал и без всякого сомненья людям тайну даровал P.s. Есть загвоздочка одна, эта тайна не проста и поймёт её не каждый только тот, кто не стандартно размышляет иногда.</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="reviews_block_container-wrapper__person">
+							<div class="reviews_block_container-wrapper__person-thumb">
+								<img src="images/reviews_profile.png" />
+							</div>
+							<div class="reviews_block_container-wrapper__person-name">
+								<p>Иванов Иванов</p>
+								<span>16.02.2018</span>
+							</div>
+						</div>
+						<div class="reviews_block_container-wrapper__comment">
+							<p>Фруктов жидких я не знал в жизни много потерял. Фрукты житкие познал многое я осознал. Осипенко что-то знал, тайну ягод разгадал и без всякого сомненья людям тайну даровал P.s. Есть загвоздочка одна, эта тайна не проста и поймёт её не каждый только тот, кто не стандартно размышляет иногда.</p>
+						</div>
+					</div>
+				</div>
+				<div class="reviews_block_container-wrapper__addreview">
+					<div class="reviews_block_container-wrapper__addreview__header">
+						<div class="reviews_block_container-wrapper__addreview__header-close">
+							<a href="#"><img src="images/icon-close.png" /></a>
+						</div>
+						<img src="images/icon-profile.png" />
+						<p>ДОБАВИТЬ СВОЙ ОТЗЫВ</p>
+					</div>
+					<div class="reviews_block_container-wrapper__addreview__content">
+						<input type="text" name="name" value="" placeholder="Укажите Ваше имя" />
+						<textarea name="comment" placeholder="Оставьте Ваш отзыв" ></textarea>
+					</div>
+				</div>
+				<div class="reviews_block_container-wrapper__button">
+					<button>ДОБАВИТЬ ОТЗЫВ</button>
+				</div>
+				<div class="owl-custom-pagination reviews_block_container-wrapper-pagination">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="reward_block">
+	<div class="container">
+		<div class="reward_block_container">
+			<div class="reward_block_container-header">
+				<p>Наши награды</p>
+			</div>
+		</div>
+		<div class="owl-carousel owl-theme reward reward_block_container-content">
+			<div class="reward_block_container-content_item item">
+				<img src="images/img-reward.jpg">
+			</div>
+			<div class="reward_block_container-content_item item">
+				<img src="images/img-reward.jpg">
+			</div>
+			<div class="reward_block_container-content_item item">
+				<img src="images/img-reward.jpg">
+			</div>
+			<div class="reward_block_container-content_item item">
+				<img src="images/img-reward.jpg">
+			</div>
+		</div>
+	</div>
+</section>
+<section class="question_block">
+	<div class="container">
+		<div class="question_block_container">
+			<div class="question_block_container-header">
+				<p>Есть вопросы? Ответим каждому!</p>
+			</div>
+			<div class="question_block_container-content">
+				<div class="question_block_container-content-item">
+					<div class="question_block_container-content-item__thumb">
+						<img src="images/help_2.png" />
+					</div>
+					<div class="question_block_container-content-item__text">
+						<p class="header">Консультация по телефону</p>
+						<p>Возникли вопросы?<br />Мы с радостью на них ответим!<br />+38 (095) 098 90 58</p>
+					</div>
+				</div>
+				<div class="question_block_container-content-item">
+					<div class="question_block_container-content-item__thumb">
+						<img src="images/call-my.png" />
+					</div>
+					<div class="question_block_container-content-item__text">
+						<p class="header">Кобратный звонок</p>
+						<p>Оставьте заявку и мы Вам перезвоним!</p>
+					</div>
+				</div>
+				<div class="question_block_container-content-item">
+					<div class="question_block_container-content-item__thumb">
+						<img src="images/message.png" />
+					</div>
+					<div class="question_block_container-content-item__text">
+						<p class="header">Написать нам письмо</p>
+						<p>Идеи? Предложения?<br />Мы открыты для любых вопросов<br />sample.email@com.ua</p>
+					</div>
+				</div>
+			</div>
+			<div class="question_block_container-link">
+				<a href="#" >Заказать звонок</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="faq_block">
+	<div class="container">
+		<div class="faq_block_container">
+			<div class="faq_block_container-header">
+				<p>Часто задаваемые вопросы</p>
+			</div>
+		</div>
+		<div class="faq_block_container-content">
+			<ul class="faq_block_container-content_wrapper left">
+				<li class="faq_block_container-content_wrapper__item">
+					<span class="faq_block_container-content_wrapper__item-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</span><span class="yon">+</span>
+					<div class="faq_block_container-content_wrapper__item-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+					</div>
+				</li>
+				<li class="faq_block_container-content_wrapper__item">
+					<span class="faq_block_container-content_wrapper__item-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</span><span class="yon">+</span>
+					<div class="faq_block_container-content_wrapper__item-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+					</div>
+				</li>
+				<li class="faq_block_container-content_wrapper__item">
+					<span class="faq_block_container-content_wrapper__item-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</span><span class="yon">+</span>
+					<div class="faq_block_container-content_wrapper__item-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+					</div>
+				</li>
+				<li class="faq_block_container-content_wrapper__item">
+					<span class="faq_block_container-content_wrapper__item-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</span><span class="yon">+</span>
+					<div class="faq_block_container-content_wrapper__item-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+					</div>
+				</li>
+			</ul>
+			<ul class="faq_block_container-content_wrapper right">
+				<li class="faq_block_container-content_wrapper__item">
+					<span class="faq_block_container-content_wrapper__item-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</span><span class="yon">+</span>
+					<div class="faq_block_container-content_wrapper__item-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+					</div>
+				</li>
+				<li class="faq_block_container-content_wrapper__item">
+					<span class="faq_block_container-content_wrapper__item-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</span><span class="yon">+</span>
+					<div class="faq_block_container-content_wrapper__item-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+					</div>
+				</li>
+				<li class="faq_block_container-content_wrapper__item">
+					<span class="faq_block_container-content_wrapper__item-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</span><span class="yon">+</span>
+					<div class="faq_block_container-content_wrapper__item-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+					</div>
+				</li>
+				<li class="faq_block_container-content_wrapper__item">
+					<span class="faq_block_container-content_wrapper__item-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</span><span class="yon">+</span>
+					<div class="faq_block_container-content_wrapper__item-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<section class="footer">
+	<div class="container">
+		<div class="footer_container">
+			<div class="footer_container-top">
+				<div class="footer_container-top__logo">
+					<img src="images/logo_footer.png" />
+				</div>
+				<div class="footer_container-top__navbar">
+					<ul class="footer_container-top__navbar-list">
+						<li>
+							<a href="#">ОТЗЫВЫ</a>
+						</li>
+						<li>
+							<a href="#">КАТАЛОГ ТОВАРОВ</a>
+						</li>
+						<li>
+							<a href="#">ОПЛАТА И ДОСТАВКА</a>
+						</li>
+						<li>
+							<a href="#">НАШ БЛОГ</a>
+						</li>
+						<li>
+							<a href="#">КОНТАКТЫ</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer_container-bottom">
+				<div class="footer_container-bottom__copyrights">
+					<p>2018 ©  жидкие фрукты</p>
+				</div>
+				<div class="footer_container-bottom__social">
+					<a href="#"><img src="images/facebook-botom.png" /></a>
+					<a href="#"><img src="images/youtube.png" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</body>
+</html>

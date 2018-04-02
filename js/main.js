@@ -362,4 +362,50 @@ $( "a.remove" ).each(function(index) {
 	    }
 	});
 
+
+	$(".delivery, .paid").click(function() {
+      $.ajax('/forward');
+      $('button').removeClass('active');
+      $(this).addClass('active');
+	});
+
+	//page about, owl carousel, reward
+	$('.owl-carousel.reward').owlCarousel({
+			loop: true,
+			dots: false,
+			margin: 3,
+			mouseDrag: false,
+			nav: true,
+			navText: ['<img src="images/arrow-l.png">', '<img src="images/arrow-r.png">'],
+			responsiveClass: true,
+			responsive: {
+				0: {
+					items: 1,
+					dots: true,
+				},
+				768: {
+					items: 2
+				},
+				1200: {
+					items: 4
+				}
+			}
+	})
+
+
+	// this faq 
+	$(".faq_block_container-content_wrapper__item").click(function () {
+	   if($(this).hasClass('open')){
+			$(this).removeClass("open");
+			$(this).children(".faq_block_container-content_wrapper__item-content").slideUp("slow");
+			$(this).children(".yon").text("+");
+	   }
+	    else{
+			$(this).addClass("open");
+			$(this).children(".faq_block_container-content_wrapper__item-content").slideDown("slow");
+			$(this).children(".yon").text("-");
+		}
+	});
+
+
 });
