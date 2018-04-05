@@ -28,7 +28,12 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
             window.testSelAll2 = $('.testSelAll2').SumoSelect({selectAll:true});
-        });
+            window.asd = $('.SlectBox').SumoSelect({ csvDispCount: 3, selectAll:true, captionFormatAllSelected: "Все."
+	       });
+	        $('.SlectBox').on('sumo:opened', function(o) {
+	              console.log("dropdown opened", o)
+	            });
+	        });
 	</script>
 </head>
 <body>
@@ -217,7 +222,7 @@
 			<div class="category_block_container_header">
 				<div class="category_block_container_header_select one">
 					<span>Вид продукции:</span>
-					<select multiple="multiple" placeholder="Текст" onchange="console.log($(this).children(':selected').length)" class="testSelAll2">
+					<select  class="SlectBox" placeholder="Текст" required="required">
 				       <option value="1">Черничная паста</option>
 				       <option value="2">Брусничная паста</option>
 				       <option value="3">Клюквенная паста</option>
@@ -253,141 +258,270 @@
            		<div class="category_block_container_header_list">
            			<span>Вид списка:</span>
            			<div class="category_block_container_header_list__button buttons">
-				        <button class="grid"><img src="images/icon-grid.png"></button>
-				        <button class="list"><img src="images/icon-list.png"></button>
+				        <button id="grid" class="grid"><img src="images/icon-grid.png"></button>
+				        <button id="list" class="list"><img src="images/icon-list.png"></button>
 				    </div>				    
            		</div>
-
-           		
+           		<div id="sorting" class="category_block_container_header_sorting">
+           			<span>Сортировка по умолчанию</span>
+           			<div class="category_block_container_header_sorting_thumb thumb-sorting"></div>
+           		</div>
 			</div>
 			<div class="category_block_container_content">
-           			<div class="category_block_container_content_list lists">
-			        	<div class="category_block_container_content_list_item item">
-							<div class="category_block_container_content_list_item__images">
-								<img src="images/products/product_1.jpg">
-							</div>
-							<div class="category_block_container_content_list_item__text-wrap">
-								<div class="category_block_container_content_list_item__text-wrap__text">
-									<h3>Паста черного винограда</h3>
-									<div class="category_block_container_content_list_item__text-wrap__text__raty raty"></div>
-									<div class="category_block_container_content_list_item__text-wrap__text__rating">
-										<img src="images/icon-arrow.png"> <span>17 отзывов</span>
-									</div>
-									<div class="category_block_container_content_list_item__text-wrap__text__text-desc">
-										Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста. Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста.
-									</div>
-									<div class="category_block_container_content_list_item__text-wrap__text__text-view"><a href="#">Смотреть подробнее</a></div>
+				<div id="grid-content" class="category_block_container_content_grid">
+					<div class="category_block_container_content_grid-item item">
+						<div class="category_block_container_content_grid-item__items-container">
+							<div class="category_block_container_content_grid-item__items-container__header">
+								<a href="#">Паста черного винограда</a>
+								<div class="category_block_container_content_grid-item__items-container__header-like">
+									<button class="category_block_container_content_grid-item__items-container__header-like__button" type="button"><img src="images/icon-like.png" /></button>
 								</div>
-								<div class="category_block_container_content_list_item__text-wrap__container">
-									<div class="category_block_container_content_list_item__text-wrap__container-like">
-										<button class="category_block_container_content_list_item__text-wrap__container-like__button" type="button"><img src="images/icon-liked.png"></button>
+							</div>
+							<div class="category_block_container_content_grid-item__items-container__image">
+								<img src="images/products/product_1.jpg" />
+							</div>
+							<div class="category_block_container_content_grid-item__items-container__content">
+								<div class="category_block_container_content_grid-item__items-container__content-price">
+									<div class="category_block_container_content_grid-item__items-container__content-price__item">
+										<p class="old_price">
+											380 грн
+										</p>
+										<p>347 грн</p>
 									</div>
-									<div class="category_block_container_content_list_item__text-wrap__container_price">
-										<p><span>347</span> грн</p>
-										<p class="old_price"><span>317</span> грн</p>
+									<div class="category_block_container_content_grid-item__items-container__content-price__item">
+										<div class="raty"></div>
+										<div class="category_block_container_content_grid-item__items-container__content-price__item-rating">
+											<img src="images/icon-arrow.png" /> <span>2 отзыва</span>
+										</div>
 									</div>
-									<div class="category_block_container_content_list_item__text-wrap__container_addtocart">
-										<a href="#">
-											<span>В корзину</span> <img src="images/icon-bag-big.png" />
-										</a>
-									</div>
+								</div>
+								<div class="category_block_container_content_grid-item__items-container__content-addtocart">
+									<a href="#">
+										<span>В корзину</span> <img src="images/icon-bag-big.png" />
+									</a>
 								</div>
 							</div>
 						</div>
-				        <div class="category_block_container_content_list_item item">
-				        	<div class="category_block_container_content_list_item__images">
-								<img src="images/products/product_1.jpg">
-							</div>
-							<div class="category_block_container_content_list_item__text-wrap">
-								<div class="category_block_container_content_list_item__text-wrap__text">
-									<h3>Паста черного винограда</h3>
-									<div class="category_block_container_content_list_item__text-wrap__text__raty raty"></div>
-									<div class="category_block_container_content_list_item__text-wrap__text__text-desc">
-										Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста. Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста.
-									</div>
-									<div class="category_block_container_content_list_item__text-wrap__text__text-view"><a href="#">Смотреть подробнее</a></div>
-								</div>
-								<div class="category_block_container_content_list_item__text-wrap__container">
-									<div class="category_block_container_content_list_item__text-wrap__container-like">
-										<button class="category_block_container_content_list_item__text-wrap__container-like__button" type="button"><img src="images/icon-liked.png"></button>
-									</div>
-									<div class="category_block_container_content_list_item__text-wrap__container_price not-available">
-										<p><span>1347</span> грн</p>
-										<p class="not">Нет в наличии</p>
-									</div>
-									<div class="category_block_container_content_list_item__text-wrap__container_addtocart not-available">
-										<a href="#">
-											<span>В корзину</span> <img src="images/icon-bag-big.png" />
-										</a>
-									</div>
+					</div>
+					<div class="category_block_container_content_grid-item item">
+						<div class="category_block_container_content_grid-item__items-container">
+							<div class="category_block_container_content_grid-item__items-container__header">
+								<a href="#">Паста черного  винограда  </a>
+								<div class="category_block_container_content_grid-item__items-container__header-like">
+									<button class="category_block_container_content_grid-item__items-container__header-like__button" type="button"><img src="images/icon-like.png" /></button>
 								</div>
 							</div>
-				        </div>
-				        <div class="category_block_container_content_list_item item">
-				        	<div class="category_block_container_content_list_item__images">
-								<img src="images/products/product_1.jpg">
+							<div class="category_block_container_content_grid-item__items-container__image">
+								<img src="images/products/product_1.jpg" />
 							</div>
-							<div class="category_block_container_content_list_item__text-wrap">
-								<div class="category_block_container_content_list_item__text-wrap__text">
-									<h3>Паста черного винограда</h3>
-									<div class="category_block_container_content_list_item__text-wrap__text__raty raty"></div>
-									<div class="category_block_container_content_list_item__text-wrap__text__rating">
-										<img src="images/icon-arrow.png"> <span>17 отзывов</span>
+							<div class="category_block_container_content_grid-item__items-container__content">
+								<div class="category_block_container_content_grid-item__items-container__content-price">
+									<div class="category_block_container_content_grid-item__items-container__content-price__item">
+										<p>317 грн</p>
 									</div>
-									<div class="category_block_container_content_list_item__text-wrap__text__text-desc">
-										Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста. Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста.
-									</div>
-									<div class="category_block_container_content_list_item__text-wrap__text__text-view"><a href="#">Смотреть подробнее</a></div>
-								</div>
-								<div class="category_block_container_content_list_item__text-wrap__container">
-									<div class="category_block_container_content_list_item__text-wrap__container-like">
-										<button class="category_block_container_content_list_item__text-wrap__container-like__button" type="button"><img src="images/icon-liked.png"></button>
-									</div>
-									<div class="category_block_container_content_list_item__text-wrap__container_price">
-										<p><span>347</span> грн</p>
-										<p class="old_price"><span>317</span> грн</p>
-									</div>
-									<div class="category_block_container_content_list_item__text-wrap__container_addtocart">
-										<a href="#">
-											<span>В корзину</span> <img src="images/icon-bag-big.png" />
-										</a>
+									<div class="category_block_container_content_grid-item__items-container__content-price__item">
+										<div class="raty"></div>
 									</div>
 								</div>
-							</div>
-				        </div>
-				        <div class="category_block_container_content_list_item item">
-				        	<div class="category_block_container_content_list_item__images">
-								<img src="images/products/product_1.jpg">
-							</div>
-							<div class="category_block_container_content_list_item__text-wrap">
-								<div class="category_block_container_content_list_item__text-wrap__text">
-									<h3>Паста черного винограда</h3>
-									<div class="category_block_container_content_list_item__text-wrap__text__raty raty"></div>
-									<div class="category_block_container_content_list_item__text-wrap__text__rating">
-										<img src="images/icon-arrow.png"> <span>17 отзывов</span>
-									</div>
-									<div class="category_block_container_content_list_item__text-wrap__text__text-desc">
-										Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста. Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста.
-									</div>
-									<div class="category_block_container_content_list_item__text-wrap__text__text-view"><a href="#">Смотреть подробнее</a></div>
-								</div>
-								<div class="category_block_container_content_list_item__text-wrap__container">
-									<div class="category_block_container_content_list_item__text-wrap__container-like">
-										<button class="category_block_container_content_list_item__text-wrap__container-like__button" type="button"><img src="images/icon-liked.png"></button>
-									</div>
-									<div class="category_block_container_content_list_item__text-wrap__container_price">
-										<p><span>347</span> грн</p>
-									</div>
-									<div class="category_block_container_content_list_item__text-wrap__container_addtocart">
-										<a href="#">
-											<span>В корзину</span> <img src="images/icon-bag-big.png" />
-										</a>
-									</div>
+								<div class="category_block_container_content_grid-item__items-container__content-addtocart">
+									<a href="#">
+										<span>В корзину</span> <img src="images/icon-bag-big.png" />
+									</a>
 								</div>
 							</div>
-				        </div>
-				    </div>
-           		</div>
+						</div>
+					</div>
+					<div class="category_block_container_content_grid-item item">
+						<div class="category_block_container_content_grid-item__items-container">
+							<div class="category_block_container_content_grid-item__items-container__header">
+								<a href="#">Паста черного  винограда  </a>
+								<div class="category_block_container_content_grid-item__items-container__header-like">
+									<button class="category_block_container_content_grid-item__items-container__header-like__button" type="button"><img src="images/icon-like.png" /></button>
+								</div>
+							</div>
+							<div class="category_block_container_content_grid-item__items-container__image">
+								<img src="images/products/product_1.jpg" />
+							</div>
+							<div class="category_block_container_content_grid-item__items-container__content">
+								<div class="category_block_container_content_grid-item__items-container__content-price">
+									<div class="category_block_container_content_grid-item__items-container__content-price__item">
+										<p>1347 грн</p>
+									</div>
+									<div class="category_block_container_content_grid-item__items-container__content-price__item">
+										<div class="raty"></div>
+										<div class="category_block_container_content_grid-item__items-container__content-price__item-rating">
+											<img src="images/icon-arrow.png" /> <span>2 отзыва</span>
+										</div>
+									</div>
+								</div>
+								<p class="not">Нет в наличии</p>
+								<div class="category_block_container_content_grid-item__items-container__content-addtocart not-available">
+									<a href="#">
+										<span>В корзину</span> <img src="images/icon-bag-big.png" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="category_block_container_content_grid-item item">
+						<div class="category_block_container_content_grid-item__items-container">
+							<div class="category_block_container_content_grid-item__items-container__header">
+								<a href="#">Паста черного  винограда  </a>
+								<div class="category_block_container_content_grid-item__items-container__header-like">
+									<button class="category_block_container_content_grid-item__items-container__header-like__button" type="button"><img src="images/icon-like.png" /></button>
+								</div>
+							</div>
+							<div class="category_block_container_content_grid-item__items-container__image">
+								<img src="images/products/product_1.jpg" />
+							</div>
+							<div class="category_block_container_content_grid-item__items-container__content">
+								<div class="category_block_container_content_grid-item__items-container__content-price">
+									<div class="category_block_container_content_grid-item__items-container__content-price__item">
+										<p>317 грн</p>
+									</div>
+									<div class="category_block_container_content_grid-item__items-container__content-price__item">
+										<div class="raty"></div>
+										<div class="category_block_container_content_grid-item__items-container__content-price__item-rating">
+											<img src="images/icon-arrow.png" /> <span>2 отзыва</span>
+										</div>
+									</div>
+								</div>
+								<div class="category_block_container_content_grid-item__items-container__content-addtocart">
+									<a href="#">
+										<span>В корзину</span> <img src="images/icon-bag-big.png" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+       			<div id="list-content" class="category_block_container_content_list" style="display: none;">
+		        	<div class="category_block_container_content_list_item item">
+						<div class="category_block_container_content_list_item__images">
+							<img src="images/products/product_1.jpg">
+						</div>
+						<div class="category_block_container_content_list_item__text-wrap">
+							<div class="category_block_container_content_list_item__text-wrap__text">
+								<h3>Паста черного винограда</h3>
+								<div class="category_block_container_content_list_item__text-wrap__text__raty raty"></div>
+								<div class="category_block_container_content_list_item__text-wrap__text__rating">
+									<img src="images/icon-arrow.png"> <span>17 отзывов</span>
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__text__text-desc">
+									Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста. Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста.
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__text__text-view"><a href="#">Смотреть подробнее</a></div>
+							</div>
+							<div class="category_block_container_content_list_item__text-wrap__container">
+								<div class="category_block_container_content_list_item__text-wrap__container-like">
+									<button class="category_block_container_content_list_item__text-wrap__container-like__button" type="button"><img src="images/icon-liked.png"></button>
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__container_price">
+									<p><span>347</span> грн</p>
+									<p class="old_price"><span>317</span> грн</p>
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__container_addtocart">
+									<a href="#">
+										<span>В корзину</span> <img src="images/icon-bag-big.png" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+			        <div class="category_block_container_content_list_item item">
+			        	<div class="category_block_container_content_list_item__images">
+							<img src="images/products/product_1.jpg">
+						</div>
+						<div class="category_block_container_content_list_item__text-wrap">
+							<div class="category_block_container_content_list_item__text-wrap__text">
+								<h3>Паста черного винограда</h3>
+								<div class="category_block_container_content_list_item__text-wrap__text__raty raty"></div>
+								<div class="category_block_container_content_list_item__text-wrap__text__text-desc">
+									Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста. Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста.
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__text__text-view"><a href="#">Смотреть подробнее</a></div>
+							</div>
+							<div class="category_block_container_content_list_item__text-wrap__container">
+								<div class="category_block_container_content_list_item__text-wrap__container-like">
+									<button class="category_block_container_content_list_item__text-wrap__container-like__button" type="button"><img src="images/icon-liked.png"></button>
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__container_price not-available">
+									<p><span>1347</span> грн</p>
+									<p class="not">Нет в наличии</p>
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__container_addtocart not-available">
+									<a href="#">
+										<span>В корзину</span> <img src="images/icon-bag-big.png" />
+									</a>
+								</div>
+							</div>
+						</div>
+			        </div>
+			        <div class="category_block_container_content_list_item item">
+			        	<div class="category_block_container_content_list_item__images">
+							<img src="images/products/product_1.jpg">
+						</div>
+						<div class="category_block_container_content_list_item__text-wrap">
+							<div class="category_block_container_content_list_item__text-wrap__text">
+								<h3>Паста черного винограда</h3>
+								<div class="category_block_container_content_list_item__text-wrap__text__raty raty"></div>
+								<div class="category_block_container_content_list_item__text-wrap__text__rating">
+									<img src="images/icon-arrow.png"> <span>17 отзывов</span>
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__text__text-desc">
+									Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста. Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста.
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__text__text-view"><a href="#">Смотреть подробнее</a></div>
+							</div>
+							<div class="category_block_container_content_list_item__text-wrap__container">
+								<div class="category_block_container_content_list_item__text-wrap__container-like">
+									<button class="category_block_container_content_list_item__text-wrap__container-like__button" type="button"><img src="images/icon-liked.png"></button>
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__container_price">
+									<p><span>347</span> грн</p>
+									<p class="old_price"><span>317</span> грн</p>
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__container_addtocart">
+									<a href="#">
+										<span>В корзину</span> <img src="images/icon-bag-big.png" />
+									</a>
+								</div>
+							</div>
+						</div>
+			        </div>
+			        <div class="category_block_container_content_list_item item">
+			        	<div class="category_block_container_content_list_item__images">
+							<img src="images/products/product_1.jpg">
+						</div>
+						<div class="category_block_container_content_list_item__text-wrap">
+							<div class="category_block_container_content_list_item__text-wrap__text">
+								<h3>Паста черного винограда</h3>
+								<div class="category_block_container_content_list_item__text-wrap__text__raty raty"></div>
+								<div class="category_block_container_content_list_item__text-wrap__text__rating">
+									<img src="images/icon-arrow.png"> <span>17 отзывов</span>
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__text__text-desc">
+									Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста. Паста белого винограда пример текстПаста белого винограда пример текста пример текста пример  пример текста.
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__text__text-view"><a href="#">Смотреть подробнее</a></div>
+							</div>
+							<div class="category_block_container_content_list_item__text-wrap__container">
+								<div class="category_block_container_content_list_item__text-wrap__container-like">
+									<button class="category_block_container_content_list_item__text-wrap__container-like__button" type="button"><img src="images/icon-liked.png"></button>
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__container_price">
+									<p><span>347</span> грн</p>
+								</div>
+								<div class="category_block_container_content_list_item__text-wrap__container_addtocart">
+									<a href="#">
+										<span>В корзину</span> <img src="images/icon-bag-big.png" />
+									</a>
+								</div>
+							</div>
+						</div>
+			        </div>
+			    </div>
+           	</div>
 		</div>
 	</div>
 </section>

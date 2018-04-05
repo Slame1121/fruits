@@ -75,7 +75,7 @@
 		<div class="fixed_navbar-container">
 			<div class="fixed_navbar-container-catalog">
 				<button type="button"><img src="images/icon-catalog.png">Каталог товаров</button>
-				<div class="fixed_navbar-container-catalog__dropdown" style="display: none;">
+				<div class="fixed_navbar-container-catalog__dropdown">
 					<div class="catalog_block">
 						<div class="container">
 							<div class="catalog_block_container">
@@ -197,105 +197,162 @@
 		<div class="breadcrumbs_block_container">
 			<ul class="breadcrumbs_block_container__bread-crumbs">
 				<li><a class="home" href="index.html">Главная</a></li>
-				<li><a href="#">Корзина покупок</a></li>
-				<li>Оформление заказа</li>
+				<li>Каталог продукции</li>
 			</ul>
 		</div>
 	</div>
 </section>
-<section id="ordering" class="ordering_block">
+<section class="catalog_block">
 	<div class="container">
-		<div class="ordering_block_container">
-			<div class="ordering_block_container__login active">
-				<div class="ordering_block_container__login-header">
-					<span class="step"><strong>Шаг 1</strong> / 4</span>
-					<img src="images/user-login.png" />
-				</div>
-				<div class="ordering_block_container__login-content">
-					<div class="tabs_container">
-						<div class="tabs">
-							<ul class="tabs_list">
-								<li><a class="active" href="#tab_register">Новый покупатель</a></li>
-								<li><a href="#tab_login">Постоянный клиент</a></li>
-							</ul>
+		<div class="catalog_block_container">
+			<div class="catalog_block_container-header">
+				<p>КАТАЛОГ ТОВАРОВ</p>
+			</div>
+			<div id="categories_list" class="catalog_block_container-list owl-carousel owl-theme">
+				<div class="item catalog_block_container-list__item">
+					<div class="catalog_block_container-list__item thumb">
+					<img data-image="images/categories/1.png" data-image-active="images/categories/1-active.png" src="images/categories/1.png" />
+					<div class="item catalog_block_container-list__item-wrapper">
+						<div class="catalog_block_container-list__item-wrapper-text">
+							<h3>ЯГОДНЫЕ И  ФРУКТОВЫЕ ПАСТЫ </h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+							<button>ПОДРОБНЕЕ</button>
 						</div>
-						<div class="tabs_items">
-							<div id="tab_register" class="login__form active">
-								<form id="register_form">
-									<input type="text" name="name" value="" placeholder="Ваше имя*" />
-									<input type="text" name="phone" value="" placeholder="Ваш номер телефона*" />
-									<input type="email" name="email" value="" placeholder="Ваш Email" />
-								</form>
-								<div class="login__form-submit">
-									<button disabled type="submit" form="register_form"><span>Выполнить вход</span></button>
-								</div>
-								<p class="follow">*email Если вы хотите следить за статусом выполнения заказа</p>
-							</div>
-							<div id="tab_login" class="login__form">
-								<form  id="login_form">
-									<input type="email" name="email" value="" placeholder="Email" />
-									<input type="password" name="password" value="" placeholder="Пароль" />
-								</form>
-								<div class="login__form-forget"><a href="#">Забыли свой парль?</a></div>
-								<div class="login__form-submit">
-									<button type="submit" form="login_form"><span>Выполнить вход</span></button>
-								</div>
-								<div class="login__form-social">
-									<p>Войти как пользователь: <a href="#"><img src="images/icon-facebook.png" /></a></p>
-								</div>
-							</div>
-						</div>						
-					</div>					
+					</div>
+					</div>
+					<div class="catalog_block_container-list__item thumb">
+					<img src="images/categories/4.png" />
+					<div class="item catalog_block_container-list__item-wrapper">
+						<div class="catalog_block_container-list__item-wrapper-text">
+							<h3>НАПИТКИ</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+							<button>ПОДРОБНЕЕ</button>
+						</div>
+					</div>
+					</div>
+					<div class="catalog_block_container-list__item thumb">
+					<img src="images/categories/7.png" />
+					<div class="item catalog_block_container-list__item-wrapper">
+						<div class="catalog_block_container-list__item-wrapper-text">
+							<h3>РЕКЛАМНАЯ ПРОДУКЦИЯ</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+							<button>ПОДРОБНЕЕ</button>
+						</div>
+					</div>
+					</div>
 				</div>
-			</div>
-			<div class="ordering_block_container__delivery">
-				<div class="ordering_block_container__delivery-header">
-					<span class="step"><strong>Шаг 2</strong> / 4</span>
-					<img src="images/delivery.png" />
-					<span>Способ доставки</span>
+				<div class="item catalog_block_container-list__item">
+					<div class="catalog_block_container-list__item thumb">
+					<img src="images/categories/2.png" />
+					<div class="item catalog_block_container-list__item-wrapper">
+						<div class="catalog_block_container-list__item-wrapper-text">
+							<h3>белковые ПАСТЫ</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+							<button>ПОДРОБНЕЕ</button>
+						</div>
+					</div>
+					</div>
+					<div class="catalog_block_container-list__item thumb">
+					<img src="images/categories/5.png" />
+					<div class="item catalog_block_container-list__item-wrapper">
+						<div class="catalog_block_container-list__item-wrapper-text">
+							<h3>МАСЛА</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+							<button>ПОДРОБНЕЕ</button>
+						</div>
+					</div>
+					</div>
+					<div class="catalog_block_container-list__item thumb">
+					<img src="images/categories/8.png" />
+					<div class="item catalog_block_container-list__item-wrapper">
+						<div class="catalog_block_container-list__item-wrapper-text">
+							<h3>РЕКЛАМНАЯ ПРОДУКЦИЯ</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+							<button>ПОДРОБНЕЕ</button>
+						</div>
+					</div>
+					</div>
 				</div>
-				<div class="ordering_block_container__delivery-content">
-					<button disabled class="ordering_block_container__delivery-content__button delivery"><span>Доставка курьером Херсон</span></button>
-					<button disabled class="ordering_block_container__delivery-content__button delivery"><span>Новая почта</span></button>
-					<button disabled class="ordering_block_container__delivery-content__button delivery active"><span>Самовывоз</span></button>
-					<div class="ordering_block_container__delivery-content-submit">
-						<button disabled type="submit"><span>Продолжить</span></button>
+				<div  class="item catalog_block_container-list__item">
+					<div class="catalog_block_container-list__item thumb">
+					<img src="images/categories/3.png" />
+					<div class="item catalog_block_container-list__item-wrapper">
+						<div class="catalog_block_container-list__item-wrapper-text">
+							<h3>Зерновые  и бобовые продукты</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+							<button>ПОДРОБНЕЕ</button>
+						</div>
+					</div>
+					</div>
+					<div class="catalog_block_container-list__item thumb">
+					<img src="images/categories/6.png" />
+					<div class="item catalog_block_container-list__item-wrapper">
+						<div class="catalog_block_container-list__item-wrapper-text">
+							<h3>АКСЕССУАРЫ</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+							<button>ПОДРОБНЕЕ</button>
+						</div>
+					</div>
+					</div>
+					<div class="catalog_block_container-list__item thumb">
+					<img src="images/categories/9.png" />
+					<div class="item catalog_block_container-list__item-wrapper">
+						<div class="catalog_block_container-list__item-wrapper-text">
+							<h3>РЕКЛАМНАЯ ПРОДУКЦИЯ</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</p>
+							<button>ПОДРОБНЕЕ</button>
+						</div>
+					</div>
 					</div>
 				</div>
 			</div>
-			<div class="ordering_block_container__address">
-				<div class="ordering_block_container__address-header">
-					<span class="step"><strong>Шаг 3</strong> / 4</span>
-					<img src="images/address.png" />
-					<span>Адрес доставки</span>
+			<div class="owl-custom-pagination catalog_block_container-pagination">
+
+			</div>
+			<div class="catalog_block_container-subcategories">
+				<div class="catalog_block_container-subcategories__close">
+					<a href="#" ><img src="images/icon-close.png" /></a>
 				</div>
-				<div class="ordering_block_container__address-content">
-					<form id="address_form">
-						<input disabled type="text" name="name" value="" placeholder="Ваш город*" />
-						<input disabled type="text" name="street" value="" placeholder="Ваша улица*" />
-						<input disabled type="text" name="number-home" value="" placeholder="Номер вашего дома*" />
-						<input disabled type="text" name="number-room" value="" placeholder="Номер вашей квартиры*" />
-					</form>
-					<div class="ordering_block_container__address-content-submit">
-						<button disabled form="address_form" type="submit"><span>Продолжить</span></button>
+				<div class="catalog_block_container-subcategories__header">
+					<img src="images/icon-subcategories.png" />
+					<p><span>СМОТРЕТЬ ВСЕ ТОВАРЫ</span> /  ягодные и фруктовые пасты </p>
+				</div>
+				<div class="catalog_block_container-subcategories__content">
+					<div class="catalog_block_container-subcategories__content-item">
+						<a href="">Черничная паста</a>
+					</div>
+					<div class="catalog_block_container-subcategories__content-item">
+						<a href="">Клюквенная паста</a>
+					</div>
+					<div class="catalog_block_container-subcategories__content-item">
+						<a href="">Клюквенная паста</a>
+					</div>
+					<div class="catalog_block_container-subcategories__content-item">
+						<a href="">Черничная паста</a>
+					</div>
+					<div class="catalog_block_container-subcategories__content-item">
+						<a href="">Клюквенная паста</a>
+					</div>
+					<div class="catalog_block_container-subcategories__content-item">
+						<a href="">Клюквенная паста</a>
+					</div>
+					<div class="catalog_block_container-subcategories__content-item">
+						<a href="">Черничная паста</a>
+					</div>
+					<div class="catalog_block_container-subcategories__content-item">
+						<a href="">Клюквенная паста</a>
+					</div>
+					<div class="catalog_block_container-subcategories__content-item">
+						<a href="">Клюквенная паста</a>
 					</div>
 				</div>
 			</div>
-			<div class="ordering_block_container__paid">
-				<div class="ordering_block_container__paid-header">
-					<span class="step"><strong>Шаг 4</strong> / 4</span>
-					<img src="images/paid.png" />
-					<span>Способы оплаты</span>
+			<div class="catalog_block_container-footer">
+				<div class="catalog_block_container-footer__link">
+					<a href="#" class="">открыть каталог всей продукции</a>
 				</div>
-				<div class="ordering_block_container__paid-content">
-					<button disabled class="ordering_block_container__paid-content__button paid"><span>Наличными при получении</span></button>
-					<button disabled class="ordering_block_container__paid-content__button paid active"><span>Оплата банковской картой</span></button>
-					<div class="ordering_block_container__paid-content-important">
-						<p><span>*</span> Оплата производится наложенным платежом при получении товара в почтовом отделении. Стоимость доставки товара рассчитывается индивидуально. Учитывается вес посылки, дальность отправления и способ доставки (наземная/авиа).</p>
-					</div>
-					<div class="ordering_block_container__paid-content-submit">
-						<button disabled type="submit"><span>Продолжить</span></button>
-					</div>
+				<div class="catalog_block_container-footer__pagination">
+
 				</div>
 			</div>
 		</div>

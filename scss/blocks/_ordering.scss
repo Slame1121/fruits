@@ -23,6 +23,12 @@
           text-align: right;
           font-size: 15px;
           line-height: 20px;
+          color: #c6c6c6;
+        }
+      }
+      &.active {
+      .step {
+          color: #000;
         }
       }
       &-content {
@@ -122,11 +128,10 @@
               display: block;
               cursor: pointer;
               width: 100%;
-              background: #88e538;
+              background: #c6c6c6;
               border: 0 none;
               text-align: center;
               padding: 15px 0;
-              /*margin: 15px 0;*/
               span{
                 color: #fff;
                 font-size: 24px;
@@ -147,7 +152,7 @@
                 }
               }
             }
-          }
+          } 
           .login__form-social{
             margin-top: 10px;
             text-align: center;
@@ -162,6 +167,11 @@
               }
             }
           }
+        }
+      }
+      &.active {
+      button[type="submit"] {
+          background: #a4e243 !important;
         }
       }
     }
@@ -192,6 +202,14 @@
           color: #c6c6c6;
           font-size: 15px;
           line-height: 20px;
+        }
+      }
+      &.active {
+        z-index: 10;
+      }
+      &.active {
+      .step {
+          color: #000;
         }
       }
       &-content {
@@ -251,6 +269,11 @@
             }
         }
       }
+      &.active {
+      button[type="submit"] {
+          background: #a4e243 !important;
+        }
+      }
     }
     &__address{
       display: inline-block;
@@ -280,6 +303,14 @@
           color: #c6c6c6;
           font-size: 15px;
           line-height: 20px;
+        }
+      }
+      &.active {
+        z-index: 10;
+      }
+      &.active {
+      .step {
+          color: #000;
         }
       }
       &-content {
@@ -326,6 +357,11 @@
             }
         }
       }
+      &.active {
+      button[type="submit"] {
+          background: #a4e243 !important;
+        }
+      }
     }
     &__paid{
       display: inline-block;
@@ -355,6 +391,14 @@
           color: #c6c6c6;
           font-size: 15px;
           line-height: 20px;
+        }
+      }
+      &.active {
+        z-index: 10;
+      }
+      &.active {
+      .step {
+          color: #000;
         }
       }
       &-content {
@@ -422,6 +466,11 @@
                 }
               }
             }
+        }
+      }
+      &.active {
+      button[type="submit"] {
+          background: #a4e243 !important;
         }
       }
     }

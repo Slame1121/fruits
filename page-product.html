@@ -231,7 +231,7 @@
 								<img src="images/icon-repost.png">
 							</div>						
 						</div>
-						<div class="product_card_container-item-wrap__text-wrap_container tabs_container">
+						<div id="tabs-head" class="product_card_container-item-wrap__text-wrap_container tabs_container">
 							<div class="product_card_container-item-wrap__text-wrap_container__tabs">
 								<ul class="tabs_list">
 									<li><a class="active" href="#tab_description">Описание продукта</a></li>
@@ -239,7 +239,7 @@
 									<li><a href="#tab_composition">Состав продукта</a></li>
 								</ul>
 							</div>
-							<div class="product_card_container-item-wrap__text-wrap_container-content tabs_items">
+							<div id="tabs-content" class="product_card_container-item-wrap__text-wrap_container-content tabs_items">
 								<div id="tab_description" class="product_card_container-item-wrap__text-wrap_container-content__item active mCustomScrollbar">
 									<div class="product_card_container-item-wrap__text-wrap_container-content__item-content">
 										<p>Жизнь человека омрачнится, если вдруг исчезнет виноград. Нет ни одного великого поета, который не воспел бы эту солнечную ягоду. Виноград широко используется в производстве продуктов для здоровья. Однако, большинство производителей выпускают продукты, содержащие только отдельные составляющие этой ягоды. Поэтому в продаже широко представлены соки, вина, поли-шкурки, масло из косточек… Будучи сторонниками цельных продуктов созданных самой природой, мы предлагаем единый продукт, в котором полностью раскрыт весь его уникальный потенциал.</p>
@@ -247,67 +247,58 @@
 									</div>
 								</div>
 								<div id="tab_rewiews" class="product_card_container-item-wrap__text-wrap_container-content__item">
-									<div class="product_card_container-item-wrap__text-wrap_container-content__item-content">
-										<div class="product_card_container_reviews">
-											<div class="owl-carousel owl-theme">
-												<div class="item">
-													<div class="product_card_container_reviews__person">
-														<div class="product_card_container_reviews__person-thumb">
-															<img src="images/reviews_profile.png" />
-														</div>
-														<div class="product_card_container_reviews__person-name">
-															<p>Иванов Иванов</p>
-														</div>
+									<div class="product_card_container_reviews">
+										<div id="pagereview" class="owl-carousel owl-theme review product_card_container_reviews-content">
+											<div class="product_card_container_reviews-content-items item">
+												<div class="product_card_container_reviews-content-items__person">
+													<div class="product_card_container_reviews-content-items__person-name">
+														<p>Иванов Иванов</p>
 													</div>
-													<div class="product_card_container_reviews__comment">
-														<p>Фруктов жидких я не знал в жизни много потерял. Фрукты житкие познал многое я осознал. Осипенко что-то знал, тайну ягод разгадал и без всякого сомненья людям тайну даровал P.s. Есть загвоздочка одна, эта тайна не проста и поймёт её не каждый только тот, кто не стандартно размышляет иногда.</p>
-													</div>
+													<div class="product_card_container_reviews-content-items__person-raty raty"></div>
 												</div>
-												<div class="item">
-													<div class="product_card_container_reviews__person">
-														<div class="product_card_container_reviews__person-thumb">
-															<img src="images/reviews_profile.png" />
-														</div>
-														<div class="product_card_container_reviews__person-name">
-															<p>Иванов Иванов</p>
-														</div>
-													</div>
-													<div class="product_card_container_reviews__comment">
-														<p>Фруктов жидких я не знал в жизни много потерял. Фрукты житкие познал многое я осознал. Осипенко что-то знал, тайну ягод разгадал и без всякого сомненья людям тайну даровал P.s. Есть загвоздочка одна, эта тайна не проста и поймёт её не каждый только тот, кто не стандартно размышляет иногда.</p>
-													</div>
-												</div>
-												<div class="item">
-													<div class="product_card_container_reviews__person">
-														<div class="product_card_container_reviews__person-thumb">
-															<img src="images/reviews_profile.png" />
-														</div>
-														<div class="reviews_block_container-wrapper__person-name">
-															<p>Иванов Иванов</p>
-														</div>
-													</div>
-													<div class="product_card_container_reviews__comment">
-														<p>Фруктов жидких я не знал в жизни много потерял. Фрукты житкие познал многое я осознал. Осипенко что-то знал, тайну ягод разгадал и без всякого сомненья людям тайну даровал P.s. Есть загвоздочка одна, эта тайна не проста и поймёт её не каждый только тот, кто не стандартно размышляет иногда.</p>
-													</div>
+												<div class="product_card_container_reviews-content-items__comment">
+													<p>Фруктов жидких я не знал в жизни много потерял. Фрукты житкие познал многое я осознал. Осипенко что-то знал, тайну ягод разгадал и без всякого сомненья людям тайну даровал P.s. Есть загвоздочка одна, эта тайна не проста и поймёт её не каждый только тот, кто не стандартно размышляет иногда.</p>
 												</div>
 											</div>
-											<div class="product_card_container_reviews__addreview">
-												<div class="product_card_container_reviews__addreview__header">
-													<div class="product_card_container_reviews__addreview__header-close">
-														<a href="#"><img src="images/icon-close.png" /></a>
+											<div class="product_card_container_reviews-content-items item">
+												<div class="product_card_container_reviews-content-items__person">
+													<div class="product_card_container_reviews-content-items__person-name">
+														<p>Иванов Иванов</p>
 													</div>
-													<img src="images/icon-profile.png" />
-													<p>ДОБАВИТЬ СВОЙ ОТЗЫВ</p>
+													<div class="product_card_container_reviews-content-items__person-raty raty"></div>
 												</div>
-												<div class="product_card_container_reviews__addreview__content">
-													<input type="text" name="name" value="" placeholder="Укажите Ваше имя" />
-													<textarea name="comment" placeholder="Оставьте Ваш отзыв" ></textarea>
+												<div class="product_card_container_reviews-content-items__comment">
+													<p>Фруктов жидких я не знал в жизни много потерял. Фрукты житкие познал многое я осознал. Осипенко что-то знал, тайну ягод разгадал и без всякого сомненья людям тайну даровал P.s. Есть загвоздочка одна, эта тайна не проста и поймёт её не каждый только тот, кто не стандартно размышляет иногда.</p>
 												</div>
 											</div>
-											<div class="product_card_container_reviews__button">
-												<button>ДОБАВИТЬ ОТЗЫВ</button>
+											<div class="product_card_container_reviews-content-items item">
+												<div class="product_card_container_reviews-content-items__person">
+													<div class="product_card_container_reviews-content-items__person-name">
+														<p>Иванов Иванов</p>
+													</div>
+													<div class="product_card_container_reviews-content-items__person-raty raty"></div>
+												</div>
+												<div class="product_card_container_reviews-content-items__comment">
+													<p>Фруктов жидких я не знал в жизни много потерял. Фрукты житкие познал многое я осознал. Осипенко что-то знал, тайну ягод разгадал и без всякого сомненья людям тайну даровал P.s. Есть загвоздочка одна, эта тайна не проста и поймёт её не каждый только тот, кто не стандартно размышляет иногда.</p>
+												</div>
 											</div>
-											<div class="owl-custom-pagination product_card_container_reviews-pagination">
+										</div>
+										<div class="product_card_container_reviews__addreview">
+											<div class="product_card_container_reviews__addreview__header">
+												<div class="product_card_container_reviews__addreview__header-close">
+													<a href="#"><img src="images/icon-close.png" /></a>
+												</div>
+												<p>ДОБАВИТЬ СВОЙ ОТЗЫВ</p>
 											</div>
+											<div class="product_card_container_reviews__addreview__content">
+												<input type="text" name="name" value="" placeholder="Укажите Ваше имя" />
+												<textarea name="comment" placeholder="Оставьте Ваш отзыв" ></textarea>
+											</div>
+										</div>
+										<div class="product_card_container_reviews__button">
+											<button>ДОБАВИТЬ ОТЗЫВ +</button>
+										</div>
+										<div class="owl-custom-pagination product_card_container_reviews-pagination">
 										</div>
 									</div>
 								</div>
@@ -360,9 +351,11 @@
 								<div class="product_card_container-item-wrap__text-wrap__addtocart_head_type">
 									<div class="product_card_container-item-wrap__text-wrap__addtocart_head_type_title">
 										Выберете тип:
-										<span class="product_card_container-item-wrap__text-wrap__addtocart_head_type_input"></span>
-										<span class="product_card_container-item-wrap__text-wrap__addtocart_head_type_input active"></span>
-										<span class="product_card_container-item-wrap__text-wrap__addtocart_head_type_input"></span>
+									</div>
+									<div class="product_card_container-item-wrap__text-wrap__addtocart_head_type-wrap">
+										<button class="type-amount">0,25 л</button>
+										<button class="type-amount active">0,5 л</button>
+										<button class="type-amount">1 л</button>
 									</div>
 								</div>
 								<div id="number" class="product_card_container-item-wrap__text-wrap__addtocart_head_number">
@@ -394,7 +387,7 @@
 <section class="feature_product">
 	<div class="container">
 		<div class="feature_product_container">
-			<div class="feature_product_container-header">
+			<div class="feature_product_container-header"">
 				<p>С этим товаром покупают</p>
 			</div>
 			<div class="feature_product_container-content">

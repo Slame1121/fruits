@@ -59,19 +59,20 @@ var Main = {
 		}).on('initialized.owl.carousel',function(e){
 			Main.InitOwlPagination(e);
 		});
+		//var owl = $('#pagereview');
 		owl.owlCarousel({
-			margin: 0,
-			nav: true,
+			margin: 20,
+			nav: false,
 			dots:false,
-			loop: false,
+			loop: true,
 			responsive: {
 				0: {
 					items: 1
 				},
-				600: {
+				786: {
 					items: 1
 				},
-				1000: {
+				1200: {
 					items: 1
 				}
 			}
@@ -343,8 +344,8 @@ $(document).ready(function() {
 	});
 
 /* delete product */
-$( "a.remove" ).each(function(index) {
-	$(this).click(function() {
+	$( "a.remove" ).each(function(index) {
+		$(this).click(function() {
 		  $(this).next('.cart_block_container-item-wrap').remove();
 		  $('.cart_block_container p').remove();
 		  $('.cart_block_container').prepend('<p><strong>Почему вы удалили товар ? :(</strong></p>');
@@ -353,13 +354,27 @@ $( "a.remove" ).each(function(index) {
 		});
 	});
 
-	$('button').on('click',function(e) {
-	    if ($(this).hasClass('grid')) {
-	        $('#container .lists').removeClass('list').addClass('grid');
-	    }
-	    else if($(this).hasClass('list')) {
-	        $('#container .lists').removeClass('grid').addClass('list');
-	    }
+	//category grid/list
+	$('#grid').on('click',function(e) {
+		$('#list-content').removeClass('active').hide();
+		$('#grid-content').addClass('active').show();
+	});
+	$('#list').on('click',function(e) {
+		$('#grid-content').removeClass('active').hide();
+		$('#list-content').addClass('active').show();
+	});
+	
+
+	//category sorting
+	$("#sorting").click(function(e) {
+	  e.preventDefault();
+	  $(this).toggleClass('active');
+	})
+
+	//category type-amount
+	$(".type-amount").click(function() {
+      $('button').removeClass('active');
+      $(this).addClass('active');
 	});
 
 
@@ -382,9 +397,12 @@ $( "a.remove" ).each(function(index) {
 				0: {
 					items: 1,
 					dots: true,
+					nav: false
 				},
 				768: {
-					items: 2
+					items: 2,
+					dots: true,
+					nav: false
 				},
 				1200: {
 					items: 4
@@ -408,4 +426,20 @@ $( "a.remove" ).each(function(index) {
 	});
 
 
+        jQuery('table').addClass('responsive');
+        jQuery('table').wrap('<div class="res"></div>');
+
+        /*$('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+			$(this)
+			.addClass('active').siblings().removeClass('active')
+			.closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+		});*/
+
+        
+
 });
+
+jQuery(document).ready(function($) {
+    var width = $('#tabs-head').outerWidth();    
+    $('#tabs-content').css({width: width+"px", display: "block"});
+})
